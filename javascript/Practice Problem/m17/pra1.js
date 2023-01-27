@@ -18,3 +18,4 @@ var HarryMomeTakaGave = 1000;
 var orangesAnd_Apples_Price = 700;
 var HelpHarryRetunTaka =  HarryMomeTakaGave -orangesAnd_Apples_Price ;
 console.log(HelpHarryRetunTaka)
+// -----------------end----
