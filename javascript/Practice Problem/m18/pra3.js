@@ -18,3 +18,20 @@ else if (number2 > number3){
 else if (number2 && number2 < number3){
     console.log(number3);
 }
+// --------------------------------------------------------------------------
+var sides1 = 9;
+var sides2 = 8;
+var sides3 = 9;
+
+if (sides1 == sides2){
+    console.log(sides1, "Isosceles-1&2 are same");
+}
+else if (sides2 == sides3){
+    console.log(sides2,"Isosceles-2&3 are same")
+}
+else if (sides3 == sides1 ){
+    console.log(sides3, "Isosceles-3&1 are same")
+}
+else if (sides3 == sides2 ){
+    console.log(sides3, "Isosceles-3&2 are same")
+}
