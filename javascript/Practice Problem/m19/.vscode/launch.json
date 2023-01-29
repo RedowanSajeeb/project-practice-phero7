@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\pera1.js"
+            "program": "${file}\\pera1.js"
         }
     ]
 }
