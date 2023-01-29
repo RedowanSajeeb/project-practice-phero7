@@ -11,4 +11,4 @@ var PotiDinEr_kaj = [
         console.log(PotiDinEr_kaj);
         i++;
     }
-    // ------------
+    // ------------javascript-vaja-vaja-korta-hobe
