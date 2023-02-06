@@ -43,3 +43,21 @@ console.log(Consl);
  }
  let OutputTime = Convert (1);
  console.log(OutputTime,'mint');
+
+//  -----------------------
+
+// Write a function findOddSum() that will take the array [5, 7, 8, 10, 45, 30]
+// as the input parameter and will return the sum of the odd numbers.
+// -------------
+function findarry (aray){
+    let sumodd = 0;
+    for ( let i= 0; i < aray.length; i++){
+        if ( aray[i] % 2 !== 0){
+            sumodd += aray[i]
+        }
+    }
+    return sumodd;
+}
+const arrr = [5, 7, 8, 10, 45, 30];
+const outputt = findarry(arrr);
+console.log(outputt);
