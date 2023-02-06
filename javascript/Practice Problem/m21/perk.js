@@ -34,3 +34,12 @@ function evenOdd(EvenYer){
 }
 let Consl= evenOdd(18);
 console.log(Consl);
+
+// ৩. এমন একটা ফ্যাংশনা লিখো যেটাকে তুমি ঘন্টাকে ইনপুট প্যারামিটার হিসেবে দিবে। আর সে সেই ঘন্টাকে মিনিটে কনভার্ট করে মিনিট রিটার্ন করবে।
+// --------------
+ function Convert (time){
+    let gonta = time * 600 ;
+    return gonta;
+ }
+ let OutputTime = Convert (1);
+ console.log(OutputTime,'mint');
