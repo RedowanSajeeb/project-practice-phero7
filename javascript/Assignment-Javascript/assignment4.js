@@ -133,3 +133,8 @@ function gemsToDiamond(FirstFriendGems, secFriednGems,ThirdFriendGems){
 }
  const CalFriendsGems = gemsToDiamond (100, 5, 1);
  console.log(CalFriendsGems);
+
+ /*
+-------------------------
+----------------------END
+*/
