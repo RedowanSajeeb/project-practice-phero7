@@ -19,3 +19,18 @@ function leapYear(dateY){
     }
 }
 let datacaall = leapYear(2023);
+
+// ২. তোমার বয়স কি odd নাকি even সংখ্যা সেটা চেক কর একটা ফাংশন দিয়ে। সেই ফাংশনকে কোন সংখ্যা প্যারামিটার হিসেবে দিলে, সেই সংখ্যা Even হলে ফাংশন true রিটার্ন করবে আর Odd হলে false রিটার্ন করবে।
+// ----------------
+
+function evenOdd(EvenYer){
+    if( EvenYer % 2 == 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+let Consl= evenOdd(18);
+console.log(Consl);
