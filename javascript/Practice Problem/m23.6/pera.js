@@ -25,3 +25,4 @@ function  isJavaScriptFile (stingP){
 
 }
  isJavaScriptFile ("java.rs")
+// ---------2-vul
