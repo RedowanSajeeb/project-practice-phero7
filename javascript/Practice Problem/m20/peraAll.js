@@ -13,3 +13,16 @@ let n = 13;
                 }
             }
             NamtaFuntion(13);
+
+
+            // ২. একটা ফাংশন লিখবা যেটা যেকোন নামকে uppercase বা রেগুলার কেইস হিসেবে নিবে আর আউটপুট হিসেবে সেই নাম lowercase করে রিটার্ন করবে।
+            // --------------
+
+            function Namcase (sentence){
+                console.log(sentence.toUpperCase());
+            }
+            Namcase("redowan-sajeeb")
+
+
+            // -----------------
+            
