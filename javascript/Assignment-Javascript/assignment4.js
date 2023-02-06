@@ -52,7 +52,7 @@ console.log(ouput2);
 
 /*solving-Problem 3: Is Less or Greater than seven
 ---------------------------------------------------
-function Name =  “isLGSeven()” Function called  “isLGSeven()” Find the difference between the input value and 7. If this difference is less than 7, return the subtraction. Otherwise double of the input must be returned. Means twice the number you took as input
+function Name =  “isLGSeven()” &  Function called  “isLGSeven()” Find the difference between the input value and 7. If this difference is less than 7, return the subtraction. Otherwise double of the input must be returned. Means twice the number you took as input
 -----------------------------------------------------------
 */
 
@@ -76,6 +76,26 @@ console.log(Call3problesmsolved);
 
 /*solving-Problem 4: Finding Bad data
 ---------------------------------------------------
-
+function Name = findingBadData() & function called findingBadData(). It will take an array as input. Any number of numbers will be in the array. Numbers can be negative numbers (less than zero) and positive numbers (greater than or equal to zero). If any number is negative we will call it "Bad Data". If a number is positive, it will be called "Good Data".
+** How many bad data are there in the array and must return that number.
 -----------------------------------------------------------
 */
+function findingBadData(array){
+   if (typeof array == 'object') {
+    let BadDataCount = 0;
+    for (let i = 0; i<array.length; i++){
+        if(array[i] < 0){
+            BadDataCount++;
+        }
+    }
+    return BadDataCount;
+   }
+   else {
+    return "plz-input Push TypeOf-String likewise:'array=[2,3,-3]'";
+}
+}
+const input = [ -4, -9, -5, -33, -55 ];
+const InputArrayCall = findingBadData(input)
+console.log(InputArrayCall);
+// -------------------------------------------------------------
+
