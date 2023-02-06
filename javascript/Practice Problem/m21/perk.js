@@ -61,3 +61,19 @@ function findarry (aray){
 const arrr = [5, 7, 8, 10, 45, 30];
 const outputt = findarry(arrr);
 console.log(outputt);
+
+
+// ---------------Gaja
+
+function findarry (aray){
+    let sumodd = 0;
+    for ( let i= 0; i < aray.length; i++){
+        if ( aray[i] % 2 !== 0){
+            sumodd += aray[i]
+        }
+    }
+    return sumodd;
+}
+const arrr = [5, 7, 8, 10, 45,3,5, 30];
+const outputt = findarry(arrr);
+console.log(outputt);
