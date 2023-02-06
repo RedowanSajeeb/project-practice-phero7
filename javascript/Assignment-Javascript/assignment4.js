@@ -99,3 +99,37 @@ const InputArrayCall = findingBadData(input)
 console.log(InputArrayCall);
 // -------------------------------------------------------------
 
+/*solving-Problem 5: Convert gems into diamond
+---------------------------------------------------
+function Name = gemsToDiamond() & function called gemsToDiamond() Three numbers
+will be taken as input.
+Power of gems per 1st friend = 21
+Power of gems per 2nd friend = 32
+Power of gems per 3rd friend = 43
+
+figure out how many diamonds you will get in total by combining the gems of all friends. If the number of total diamond exceeds 1000 then 2000 will be subtracted from the total diamond and the number of remaining diamonds will be received.
+-----------------------------------------------------------
+*/
+
+function gemsToDiamond(FirstFriendGems, secFriednGems,ThirdFriendGems){
+    if(typeof FirstFriendGems == 'number' 
+    && typeof secFriednGems == 'number' 
+    && typeof ThirdFriendGems == 'number'){
+        let FdsGemsCountToMultiplication = (FirstFriendGems * 21) +
+         (secFriednGems * 32) + (ThirdFriendGems * 43);
+
+         if(1000*2 <= FdsGemsCountToMultiplication){
+            const conditionCkToTalCount = FdsGemsCountToMultiplication - 2000;
+            return conditionCkToTalCount;
+         }
+         else {
+            return FdsGemsCountToMultiplication ;
+         }
+        
+ }
+    else {
+        return "plz-input Push TypeOf-Number likewise:50,10,43.."
+    }
+}
+ const CalFriendsGems = gemsToDiamond (100, 5, 1);
+ console.log(CalFriendsGems);
