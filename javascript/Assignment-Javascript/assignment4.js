@@ -50,6 +50,32 @@ console.log(ouput2);
 // ------------------------------------------------
 
 
-/*solving-Problem 3:
+/*solving-Problem 3: Is Less or Greater than seven
+---------------------------------------------------
+function Name =  “isLGSeven()” Function called  “isLGSeven()” Find the difference between the input value and 7. If this difference is less than 7, return the subtraction. Otherwise double of the input must be returned. Means twice the number you took as input
+-----------------------------------------------------------
+*/
 
+function isLGSeven(InputValueNumber){
+    if( typeof InputValueNumber == "number"){
+        const DifferenceInputValue = InputValueNumber - 7;
+        if( DifferenceInputValue < 7){
+            return DifferenceInputValue ;
+        } 
+        else {
+            return InputValueNumber * 2;
+        }
+    }
+    else {
+        return 'plz-input Push TypeOf-Number likewise:50,10,..'
+    }
+}
+const Call3problesmsolved = isLGSeven(15);
+console.log(Call3problesmsolved);
+// --------------------------------------------------
+
+/*solving-Problem 4: Finding Bad data
+---------------------------------------------------
+
+-----------------------------------------------------------
 */
