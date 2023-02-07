@@ -81,7 +81,7 @@ function Name = findingBadData() & function called findingBadData(). It will tak
 -----------------------------------------------------------
 */
 function findingBadData(array){
-   if (typeof array == 'object') {
+   if ( Array.isArray(array) == true) {
     let BadDataCount = 0;
     for (let i = 0; i<array.length; i++){
         if(array[i] < 0){
