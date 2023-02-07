@@ -131,7 +131,7 @@ function gemsToDiamond(FirstFriendGems, secFriednGems,ThirdFriendGems){
         return "plz-input Push TypeOf-Number likewise:50,10,43.."
     }
 }
- const CalFriendsGems = gemsToDiamond (100, 5, 1);
+ const CalFriendsGems = gemsToDiamond (" 20, 200, 50");
  console.log(CalFriendsGems);
 
  /*
