@@ -78,7 +78,7 @@ console.log(Call3problesmsolved);
 ---------------------------------------------------
 function Name = findingBadData() & function called findingBadData(). It will take an array as input. Any number of numbers will be in the array. Numbers can be negative numbers (less than zero) and positive numbers (greater than or equal to zero). If any number is negative we will call it "Bad Data". If a number is positive, it will be called "Good Data".
 ** How many bad data are there in the array and must return that number.
------------------------------------------------------------
+---------------------------------------------------------
 */
 function findingBadData(array){
    if ( Array.isArray(array) == true) {
