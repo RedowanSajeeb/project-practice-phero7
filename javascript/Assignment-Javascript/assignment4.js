@@ -136,5 +136,5 @@ function gemsToDiamond(FirstFriendGems, secFriednGems,ThirdFriendGems){
 
  /*
 -------------------------
-----------------------END
+-----------------------END
 */
