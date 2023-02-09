@@ -136,5 +136,6 @@ function gemsToDiamond(FirstFriendGems, secFriednGems,ThirdFriendGems){
 
  /*
 -------------------------
------------------------END
+-----------------------ইন শা আল্লাহ হারবো নাহ আমি জিতেই নিবো আমি আমারে আমাকে পারতে'ই হবে
+--দেখা যাক!END
 */
