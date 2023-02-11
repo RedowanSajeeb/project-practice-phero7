@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Iure pariatur voluptatum vero nulla unde corporis aspernatur quas soluta modi cum eum facilis laudantium nihil repudiandae, <br> sit hic in? Molestiae, laborum!</h3>
+    <button onclick="document.getElementById('id01').style.display='block'">Open Modal</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Delete Account</h1>
+      <p>Are you sure you want to delete your account?Okay You Type <small>redowan</small> and Pass dlt-btn </p>
+        
+      <input type="text" name="" id="">
+
+
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="button" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>
+    
+
+<script src="style.js"></script>
+</body>
+</html>
