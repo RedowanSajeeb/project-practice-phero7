@@ -145,3 +145,4 @@ if (typeof firstFriendGems == "number" && typeof secondFriendGems == "number" &&
     else{
         console.log("Please insert a number in three parameters ");
     }
+    // -----------End
