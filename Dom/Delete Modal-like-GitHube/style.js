@@ -8,7 +8,9 @@ document.getElementById('inputBoxJs').addEventListener('keyup',function(eventtex
             confmBtndlt.removeAttribute('disabled');
 
         }
-        
+        else if(textConf === 'sajeeb'){
+            confmBtndlt.style.display = 'block';
+        }
         else {
             confmBtndlt.setAttribute('disabled', true);
         }
@@ -32,7 +34,7 @@ document.getElementById('inputBoxJs').addEventListener('keyup',function(eventtex
            confmBtndlt.removeAttribute('none');
 
        }
-       
+    
        else {
            confmBtndlt.setAttribute('non', true);
        }
