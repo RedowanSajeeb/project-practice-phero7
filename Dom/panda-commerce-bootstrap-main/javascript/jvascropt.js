@@ -43,19 +43,24 @@ const allbtn = document.getElementsByClassName('btn panda-btn-buy-now');
 
     // -------------------------
 
-    document.getElementById('InputEmail1').addEventListener('keyup',function(event){
-        const inputfildTextDo = event.target.value;
-        const btnpoint = document.getElementById('b');
-        if(inputfildTextDo == "email"){
-            btnpoint.removeAttribute('disabled');
-        
-        }
-        else {
-            btnpoint.setAttribute('disabled', true);
-        }
-
-
+    document.getElementById('dlt-xonfm').addEventListener('keyup',function(event){
+        const text = event.target.value;
+        console.log(text);
     })
+
+    // document.getElementById('InputEmail1').addEventListener('keyup',function(event){
+    //     const inputfildTextDo = event.target.value;
+    //     const btnpoint = document.getElementById('bUTTONID');
+    //     if(inputfildTextDo == "email"){
+    //         btnpoint.removeAttribute('disabled');
+        
+    //     }
+    //     else {
+    //         btnpoint.setAttribute('disabled', true);
+    //     }
+
+
+    // })
 
 
    
