@@ -24,27 +24,35 @@ function functionbtn () {
     document.body.style.backgroundColor = "lightblue";
     
 }
-// -----------------parlam nah......
-
-const allbtn = document.getElementsByClassName('btn panda-btn-buy-now');
-    for(const onebtn of allbtn){
-        document.getElementById(onebtn).addEventListener('click',function(event){
-            const caraccses = document.getElementsByClassName('card');
-            for(const carremove of event ){
-                caraccses.style.display = 'none';
-            }
-        })
-        
-        
+// -----------------......
+  document.getElementsByClassName('panda-btn-buy-now').addEventListener('click',function(event){
+    const byNows = document.getElementsByClassName('panda-btn-buy-now');
+    for(const byNow of byNows){
+    console.log(byNow)
     }
+  })
 
+
+// const allbtn = document.getElementsByClassName('btn panda-btn-buy-now');
+//     for(const onebtn of allbtn){
+//         document.getElementById(onebtn).addEventListener('click',function(evnet){
+//             const remove = evnet.target.parentNode
+//             const caraccses = document.getElementsByClassName('card');
+//             for(const carremove of remove ){
+//                 carremove.style.display = 'none';
+//             }
+//         })
+        
+        
+//     }
+ 
 
     
 
     // -------------------------
 
-    document.getElementById('dlt-xonfm').addEventListener('keyup',function(event){
-        const text = event.target.value;
+    document.getElementById('dlt-xonfm').addEventListener('keyup',function(evnet){
+        const text = evnet.target.value;
         console.log(text);
     })
 
@@ -66,15 +74,24 @@ const allbtn = document.getElementsByClassName('btn panda-btn-buy-now');
    
     
       
-// document.getElementById('exampleInputEmail1').addEventListener('keyup',function(eventtxt){
-//    const textin = eventtxt.target.value;
-
-//     const btOneee  = document.getElementById('exampleInputbtn');
-//     if(textin === 'email'){
-//         btOneee.removeAttribute('disabled');
-//     }
-//     else {
-//         btOneee.setAttribute('disabled', true);
-//     }
+document.getElementById('exampleInputEmail1').addEventListener('keyup',function(event){
+    const sumibtn = document.getElementsByClassName('disabledBtn');
+   const inputText = event.target.value;
+    if(inputText === 'email'){
+        sumibtn.removeAttribute('disabled');
+    }
+    else {
+        sumibtn.setAttribute('disabled', true);
+    }
     
-// })
+})
+
+// ----------------
+//  document.getElementById('subscribe').addEventListener('dblclick',function(){
+//   this.style.backgroundColor = 'pink';
+    
+//  })
+document.getElementById('subscribe').addEventListener('dblclick', function(){
+    // console.log('click porse');
+    this.style.backgroundColor = 'red';
+})
