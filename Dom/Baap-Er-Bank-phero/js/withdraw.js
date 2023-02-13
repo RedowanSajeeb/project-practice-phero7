@@ -14,7 +14,12 @@ document.getElementById('withdraw-Btn').addEventListener('click',function(){
     // ---------------------
 
     // total-blance--------------------------------------------
-    
+    const blanceFirstAmmount = document.getElementById('balance');
+    const blanceAmmountString = blanceFirstAmmount.innerText;
+    const blancAtlest = parseFloat(blanceAmmountString);
+
+    const lestCulculation = blancAtlest - withdrawPastFlod;
+     blanceFirstAmmount.innerText = lestCulculation;
 
 
 
