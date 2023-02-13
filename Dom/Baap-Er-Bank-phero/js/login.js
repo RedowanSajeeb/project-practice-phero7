@@ -4,11 +4,11 @@ document.getElementById('Submit-button').addEventListener('click',function(){
     
     const passUser = document.getElementById('user-password-input');
     const  password = passUser.value;
-    if(email == "redoBankFak$@gmail.com" && password ==='@redowan'){
-        
+    if(email == "baaperbank$Rdo@gmail.com" && password ==='redowan'){
+        window.location.href = 'bank.html'
         
     }
     else{
-        
+        alert("InvalidBro");
     }
 })
