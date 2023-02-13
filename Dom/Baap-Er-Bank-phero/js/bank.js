@@ -3,10 +3,22 @@ document.getElementById('Deposit-Btn').addEventListener('click',function(){
   const depositAmmountUserString = userDepositinputNumber.value;
   const depositAmmountUser = parseFloat(depositAmmountUserString);
   
+  if (isNaN(depositAmmountUser)) {
+    alert('Not a Number!plz-input a Number');
+    return;
+  }
+
+
     const depositck = document.getElementById('deposit');
     const parseFloatstockdepo = depositck.innerText;
     const agerDepojitValu = parseFloat(parseFloatstockdepo);
-  
+// ---------------------------------
+    userDepositinputNumber.value = ' ';
+      if( depositAmmountUser < 1 ){
+        alert('heybro-error Plz return Positive Number');
+        return;
+      }
+  // --------------------------
     const totalDepoAmmount = agerDepojitValu + depositAmmountUser;
   
     depositck.innerText = totalDepoAmmount;
@@ -21,7 +33,7 @@ document.getElementById('Deposit-Btn').addEventListener('click',function(){
       balanceidCuntionEliment.innerText = currentBlanceTaka;
 
 
-  userDepositinputNumber.value = ' ';
+ 
 
 
 })
