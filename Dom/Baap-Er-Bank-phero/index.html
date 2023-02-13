@@ -37,6 +37,7 @@
                 <div class="mb-6">
                   <input
                     type="text"
+                    id="user-email-input"
                     class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Email address"
                   />
@@ -46,6 +47,7 @@
                 <div class="mb-6">
                   <input
                     type="password"
+                    id="user-password-input"
                     class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Password"
                   />
@@ -60,20 +62,22 @@
                       checked
                     />
                     <label class="form-check-label inline-block text-gray-800" for="exampleCheck2"
-                      >Remember me</label
+                      >Remember me </label
                     >
                   </div>
                   <a
                     href="#!"
                     class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
                     >Forgot password?</a
+                    
                   >
                 </div>
       
                 <!-- Submit button -->
                 <button
                   type="submit"
-                  class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                  id="Submit-button"
+                  class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-900 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -133,6 +137,20 @@
       </section>
       <!-- ------------------------------------------------------------------------- -->
    </main>
-    
+    <footer>
+        <div class="text-center mt-10 p-6 bg-gray-200">
+            <span>© 2023 Copyright:||</span>
+            <a class="text-gray-600 font-semibold" href="https://www.facebook.com/redowan.sajeeb1">Redowan Sajeeb</a>
+            <br>
+            <span>login Email: redoBankFak$@gmail.com</span>
+            <br>
+            <span>password: @redowan</span>
+          </div>
+    </footer>
+
+
+
+    <!-- js-link ------------------->
+    <script src="js/login.js"></script>
 </body>
 </html>
