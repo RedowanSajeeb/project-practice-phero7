@@ -13,7 +13,7 @@ document.getElementById('withdraw-Btn').addEventListener('click',function(){
     const withdrawCurntBlanceString = parseFloat(withdrawinnerTextNumber);
 
     withdrawBtnGetid.value = " ";
-// -----------------
+// ------------ebd-----
     if(withdrawPastFlod < 1){
         alert('Hye-Bro Eroor');
         return;
