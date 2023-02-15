@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monny</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cyan-50">
+    <header>
+        <h1 class="text-4xl font-semibold text-center mt-14 mb-3 text-rose-500 ">Let's get Some
+            <span class="font-bold text-indigo-500	">$Moooooooney</span> </h1>
+            
+       </header>
+    <main>
+        <section class="mt-12">
+            <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 mx-auto w-9/12 lg:mt-10 ">
+                <div id="" class="border-2  bg-blue-600	 text-5xl text-center text-white mt-10 pb-9 pt-5 rounded-xl	">
+                    <h4>Deposit</h4>
+                    <hr class="border mt-3 border-dotted">
+                    <h2 class="text-5xl mt-5  ">$<span id="deposit">00</span></h2>
+                </div>
+                <div id="" class="bg-sky-500	border-2 text-5xl text-center text-white mt-10 pb-9 pt-5 rounded-xl	">
+                    <h4>Withdraw</h4>
+                    <hr class="border mt-3 border-dotted">
+                    <h2 class="text-5xl mt-5">$<span id="withdraw">00</span></h2>
+                </div>
+                <div id="Balance" class="bg-red-700	border-2 text-5xl text-center text-white mt-10 pb-9 pt-5 rounded-xl	">
+                    <h4>Balance</h4>
+                    <hr class="border mt-3 border-dotted">
+                    <h2 class="text-5xl mt-5">$<span id="balance">1240</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- Create Deposit and withdraw amount Input Fields -->
+        <section class="mt-12 ">
+            <div class="grid grid-cols-1 md:gap-4  lg:grid-cols-2 md:mx-auto w-5/3 md:w-9/12">
+                <div class="border-2 bg-indigo-500	text-5xl  text-white mt-10 pb-9 pt-5 rounded-xl	">
+                    <h1 class="ml-10 text-4xl ">Please Deposit</h1>
+                    <hr class="mx-10">
+                    <input
+                    type="number"
+                    id="user-Deposit-inputNumber"
+                    class=" mt-10 mb-12 block md:w-96 mx-auto px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    placeholder="$ amount you want to Deposit"
+                  />
+                  <a href="#_" id="Deposit-Btn" 
+                    
+                    class=" md:ml-20   relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
+                    <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                    </span>
+                    <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">Deposit</span>
+                    </a>
+        
+                </div>
+                <div class="border-2 mt-5  bg-blue-600	 text-5xl  text-white md:mt-10 pb-9 pt-5 rounded-xl	">
+                    <h1 class="ml-10 text-4xl">Please Withdraw</h1>
+                    <hr class="mx-10">
+                    <input
+                    type="number"
+                    id="user-Withdraw-inputNumber"
+
+                    class=" mt-10 mb-12    block md:w-96 mx-auto px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    placeholder="$ amount you want to Withdraw"
+                  />
+                  <a href="#_"
+                    id="withdraw-Btn"
+
+                    class=" md:ml-20  relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
+                    <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                    </span>
+                    <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">Withdraw</span>
+                    </a>
+        
+
+                </div>
+
+            </div>
+            <img class="ml-20" src="https://freepngimg.com/thumb/categories/2381.png" alt="">
+        </section>
+        <footer style="margin-top: 500px;">
+            <div class="text-center mt-10 p-6 bg-gray-200">
+                <span>© 2023 Copyright:||</span>
+                <a class="text-gray-600 font-semibold" href="https://www.facebook.com/redowan.sajeeb1">Redowan Sajeeb</a>
+    
+                <br>
+                <span>© 2023 Copyright:||</span>
+                <span>© 2023 Copyright:||</span>
+              </div>
+        </footer>    
+    </main>
+       <!-- ------------------------------ -->
+       <script src="js/bank.js"></script>
+       <script src="js/withdraw.js"></script>
+</body>
+</html>
