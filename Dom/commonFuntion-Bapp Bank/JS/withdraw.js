@@ -8,9 +8,6 @@ document.getElementById('withdraw-Btn').addEventListener('click',function(){
 
     const balanceTaka = innerTextFunction('balance');
     const totalTaka = balanceTaka - withdrawINput;
-    valueSetFuntion('balance', totalTaka);
-
-    
-    
+    valueSetFuntion('balance', totalTaka); 
 
 })
