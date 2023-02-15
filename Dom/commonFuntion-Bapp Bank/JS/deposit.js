@@ -1,10 +1,10 @@
 document.getElementById('deposit-Btn').addEventListener('click',function(){
    
-    // if (isNaN('deposit-Btn')) {
-    //     alert('Not a Number!plz-input a Number');
-    //     return;
-    //   }
+    
     const firstTakaInput = inputValueUserBox('user-Deposit-inputNumber');
+    if (isNaN(firstTakaInput)) {
+        return;
+      }
     const depositidFuncionCall = innerTextFunction('deposit');
     const depositTotalTaka = depositidFuncionCall + firstTakaInput;
 
