@@ -16,5 +16,5 @@ function priceInner (priceInnerParametar){
     const stringPriceValuInner = getElementByIdCountInnerText.innerText;
     const inputvaluInner = parseFloat(stringPriceValuInner);
     
-    return inputvaluInner;
+    return inputvaluInner ;
 }
