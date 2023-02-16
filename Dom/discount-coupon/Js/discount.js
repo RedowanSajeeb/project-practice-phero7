@@ -3,16 +3,6 @@ document.getElementById('discount-btn').addEventListener('click',function(){
     const firstPricInput = pricInputValu('enter-price-fild');
         paramiterCallWithFuntion('firsttalprice',firstPricInput); 
         
-        
-// if(inputfieldIdget === 'DISC30'){
-//     const documentPrice30 = firstPricInput - (firstPricInput * 0.3) ;
-//         paramiterCallWithFuntion('firsttalprice', documentPrice30);
-// }
-// else{
-//     const priceInputGrowPrice = priceInner('firsttalprice');
-//     paramiterCallWithFuntion('firsttalprice',priceInputGrowPrice);
-// }
-
 })
 document.getElementById('confmbtn').addEventListener('click', function() {
     const confromIDget = document.getElementById('confmbtn');
