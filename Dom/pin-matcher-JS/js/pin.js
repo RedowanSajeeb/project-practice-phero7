@@ -18,8 +18,9 @@ document.getElementById('generate-pin-id').addEventListener('click',function(){
     const PinResult = getPin();
     const pinShowBox = document.getElementById('pin-box');
     pinShowBox.value =PinResult;
-
+    
 })
+
 document.getElementById('numbers-idCalculator').addEventListener('click',function(event){
 
     const number = event.target.innerText;
@@ -48,12 +49,20 @@ document.getElementById('submit-id').addEventListener('click',function(){
     const secFildvalu = calculatorPInFinld.value;
     const pinBOxFild = document.getElementById('pin-box');
     const firstFildvalu = pinBOxFild.value;
+
+    const succfull = document.getElementById('succful-id');
+    const worng = document.getElementById('worng');
+    
     if(secFildvalu === firstFildvalu){
-        const succfull = document.getElementById('succful-id');
         succfull.style.display = 'block';
+        worng.style.display = "none"
+        
     }
     else{
-        const worng = document.getElementById('worng');
+    
         worng.style.display = "block"
+        succfull.style.display = 'none';
     }
+    pinBOxFild.value = "";
+    calculatorPInFinld.value = '';
 })
