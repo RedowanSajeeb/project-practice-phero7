@@ -21,8 +21,16 @@ document.getElementById(parentid).appendChild(tagCreate);
 function innerHtml2symbol(parentid2, finalAreaSetvalu2) {
     const innerHtml2 = document.createElement("td");
     innerHtml2.innerHTML = `
-      <ht class = "ml-2">${finalAreaSetvalu2}cm<sup>2</sup></ht>
-      <td></td><button id="btn-1st-calculate-triangale" type="button" class="text-white pl-1 pr-1 bg-blue-500 hover:bg-blue-800  font-medium rounded  dark:bg-blue-600">Covert to m<sup>2</sup></button></td>
+      <ht 
+      class = "ml-2">${finalAreaSetvalu2}cm<sup>2</sup>
+      </ht>
+      <td>
+      
+      <button 
+      id="btn-1st-calculate-triangale" type="button" class="text-white pl-1 pr-1 bg-blue-500 hover:bg-blue-800  font-medium rounded  dark:bg-blue-600">Covert to m<sup>2</sup>
+      
+      </button>
+      </td>
     `;
     const btnConvert = document.createElement('button');
     btnConvert.innerHTML = `
