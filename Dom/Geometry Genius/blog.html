@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogsHub</title>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="faq">
+        <h2 class="faq__title">Frequently questions</h2>
+        <p class="faq__subtitle">
+          Something is not clear? Javascript!! Check our FAQ section!
+        </p>
+        <button class="faq__question">1.What is DOM and what is the purpose of DOM?</button>
+        <div class="faq__panel">
+          <p class="faq__answer">
+            
+            The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+            <br>
+            A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.
+
+
+          </p>
+        </div>
+        <button class="faq__question">
+          2.How will you select HTML elements using DOM? Name the DOM methods.
+        </button>
+        <div class="faq__panel">
+          <p class="faq__answer">
+            There are 5 ways in which I can select elements in a DOM using selectors.
+            <ul>
+                <li>
+                    getElementsByTagName()
+                </li>
+                <li>
+                    getElementsByClassName()
+                    
+                </li>
+                <li>
+                    getElementById()
+                    
+                </li>
+                <li>
+                    querySelector()
+                    
+                </li>
+                <li>
+                    querySelectorAll()
+                </li>
+            </ul>
+          </p>
+        </div>
+        <button class="faq__question">3. What is event bubble?</button>
+        <div class="faq__panel">
+          <p class="faq__answer">
+            It happens when an element receives an event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.
+            <img src="https://javascript.info/article/bubbling-and-capturing/eventflow.svg" alt="">
+          </p>
+        </div>
+        <button class="faq__question">4.What is a callback function and why will you use it?</button>
+        <div class="faq__panel">
+          <p class="faq__answer">
+            A callback function is a function that is passed as an argument to another function, to be “called back” at a later time. A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It’s the combination of these two that allow us to extend our functionality.
+
+Here is a quick example:
+
+<textarea name="" id="" cols="60" rows="15">function greeting(name) {
+    alert(`Hello, ${name}`);
+  }
+  
+  function processUserInput(callback) {
+    const name = prompt("Please enter your name.");
+    callback(name);
+  }
+  
+  processUserInput(greeting);</textarea>
+          </p>
+        </div>
+      </div>
+</body>
+</html>
+<!-- -----------------------------ext-Style-File-section------------------------------------------- -->
+<style>
+    body {
+  min-height: 100vh;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  
+}
+.faq {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.faq__title {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #157aff;
+}
+
+.faq__subtitle {
+  font-size: 20px;
+}
+
+.faq__question {
+  margin: 5px;
+  background-color: #8cd5ff;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  width: 70%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 40px;
+  transition: all 0.2s ease;
+}
+
+.faq__question:after {
+  content: "\02795";
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+}
+
+.faq__question_active:after {
+  content: "\2796";
+  color: rgb(158, 153, 153);
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+}
+
+.faq__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.faq__panel {
+  display: none;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  padding-left: 15%;
+  max-width: 70%;
+  overflow: hidden;
+}
+
+.faq__question:hover {
+  background-color: #c74fff;
+}
+
+.faq__panel_active {
+  display: block;
+}
+
+</style>
+<!-- ------------------------------------------------------Javascript--------------------- -->
+<script>
+    let questions = document.querySelectorAll(".faq__question");
+questions.forEach((question) => {
+  question.addEventListener("click", function () {
+    question.classList.toggle("faq__question_active");
+    const nextElement = question.nextElementSibling;
+    nextElement.classList.toggle("faq__panel_active");
+  });
+});
+
+</script>
+<!-- --------------------------------------------------- -->

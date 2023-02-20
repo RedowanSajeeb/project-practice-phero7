@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+      <body>
+      <header >      
+  <nav class="bg-white mb-5 px-2 sm:px-4 py-2.5 dark:bg-sky-100 mt-5 md:w-3/4 md:mx-auto rounded z-20 top-5 containerr ">
+      <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="https://flowbite.com/" class="flex items-center">
+      <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Interactive">
+      <span class="self-center text-2xl font-semibold  dark:text-black">Interactive <br><span class="text-gray-600">Geometry Genius </span></span>
+      </a>
+  <div class="flex md:order-2">
+      <button type="button" onClick="location.href='blog.html'" class="text-white bg-blue-500 hover:bg-blue-900  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Blog</button>
+  </div>
+</nav>
+    </header>
+    <!-- min-section -->
+    <section class="md:w-3/4 md:mx-auto mt-5x mb-52 ">
+      <!-- cards-html -->
+            <div class="md:flex">
+              <div class="grid mt-5 md:grid-cols-1 lg:grid-cols-1 gap-6 mx-auto   w-full ">
+                <div  class=" grid md:grid-cols-2 lg:grid-cols-3 gap-4  ">
+                  <div class="border rounded flex items-center  flex-col my-element "> 
+                    <img class="mt-10" src="images/triangle.png" alt="">
+                    <h1 id="triangle-name" class="text-2xl font-bold	mt-8 text-gray-700">Triangle</h1>
+                    <h5 class="mt-2 text-slate-500">Area (A) = 0.5 x b x h</h5>
+
+                    <div class="flex items-center justify-items-center		">
+                      <input id="triangale-b-input" class="appearance-none block w-full mx-5 mt-4  bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="b"> 
+                      <h3 class="mt-3">cm</h3>
+
+                      <input id="triangale-h-input"  class="appearance-none block mx-5 w-full mt-4 bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="h">
+                      <h3 class="mt-3 mr-5">cm</h3>
+                    </div>
+
+                    <button id="btn-1st-calculate-triangale" type="button" class="text-white mt-5 mb-5 w-11/12  py-2.5 mb-2  bg-blue-500 hover:bg-blue-800  font-medium rounded text-1xl px-5 py-2.5  dark:bg-blue-600  ">Calculate</button>
+                  </div>
+
+                  <div class="border rounded flex items-center flex-col my-element "> 
+                    <img class="mt-10" src="images/rectangle.png" alt="">
+                    <h1 id="rectangle-name" class="text-2xl font-bold	mt-8 text-gray-700">Rectangle</h1>
+                    <h5 class="mt-2 text-slate-500">Area (A) = w x l</h5>
+                    <div class="flex items-center justify-items-center		">
+
+                      <input id="rectangle-w-input" class="appearance-none block w-full mx-5 mt-4  bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="w"> 
+                      <h3 class="mt-3">cm</h3>
+
+                      <input id="rectangle-l-input" class="appearance-none block mx-5 w-full mt-4 bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="l">
+                      <h3 class="mt-3 mr-5">cm</h3>
+                    </div>
+
+                    <button id="btn-2st-calculate-rectangle" type="button" class="text-white mt-5  w-11/12  py-2.5 mb-2  bg-blue-500 hover:bg-blue-800  font-medium rounded text-1xl px-5 py-2.5  dark:bg-blue-600  ">Calculate</button>
+                  </div>
+                  <div class="border rounded flex items-center flex-col my-element "> 
+                    <img class="mt-10"  src="images/parallelogram.png" alt="">
+                    <h1 id="parallelogram-name" class="text-2xl font-bold	mt-8 text-gray-700">Parallelogram</h1>
+                    <h5 class="mt-2 text-slate-500">Area (A) = b x h</h5>
+                    <div class="flex items-center justify-items-center		">
+
+                      <input id="parallelogram-b-input" class="appearance-none block w-full mx-5 mt-4  bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="b"> 
+                      <h3 class="mt-3">cm</h3>
+
+                      <input id="parallelogram-h-input" class="appearance-none block mx-5 w-full mt-4 bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="h">
+                      <h3 class="mt-3 mr-5">cm</h3>
+                    </div>
+
+                    <button id="btn-3st-calculate-parallelogram" type="button" class="text-white mt-5 mb-5 w-11/12  py-2.5 mb-2  bg-blue-500 hover:bg-blue-800  font-medium rounded text-1xl px-5 py-2.5  dark:bg-blue-600  ">Calculate</button>
+                  </div>
+                  <div class="border rounded flex items-center flex-col my-element "> 
+                    <img class="mt-10"  src="images/rhombus.png" alt="">
+                    <h1 id="rhombus-name" class="text-2xl font-bold text-gray-700	mt-8">Rhombus</h1>
+                    <h5 class="mt-2 text-slate-500">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></h5>
+                    <div class="flex items-center justify-items-center		">
+
+                      <input id="rhombus-d1-input" class="appearance-none block w-full mx-5 mt-4  bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="d1"> 
+                      <h3 class="mt-3">cm</h3>
+
+                      <input id="rhombus-d2-input" class="appearance-none block mx-5 w-full mt-4 bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="d2">
+                      <h3 class="mt-3 mr-5">cm</h3>
+                    </div>
+
+                    <button id="btn-4th-calculate-rhombus" type="button" class="text-white mt-5 mb-5 w-11/12  py-2.5 mb-2  bg-blue-500 hover:bg-blue-800  font-medium rounded text-1xl px-5 py-2.5  dark:bg-blue-600  ">Calculate</button>
+                  </div>
+                  <div class="border  rounded flex items-center flex-col my-element "> 
+                    <img class="mt-10"  src="images/pentagon.png" alt="">
+                    <h1 id="pentagon-name" class="text-2xl font-bold text-gray-700	mt-8">Pentagon</h1>
+                    <h5 class="mt-2 text-slate-500">Area (A) = 0.5 x p x b</h5>
+                    <div class="flex items-center justify-items-center		">
+
+                      <input id="pentagon-p-input" class="appearance-none block w-full mx-5 mt-4  bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="p"> 
+                      <h3 class="mt-3">cm</h3>
+
+                      <input id="pentagon-b-input" class="appearance-none block mx-5 w-full mt-4 bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="b">
+                      <h3 class="mt-3 mr-5">cm</h3>
+                    </div>
+
+                    <button id="btn-5th-calculate-pentagon" type="button" class="text-white mt-5 mb-5 w-11/12  py-2.5 mb-2  bg-blue-500 hover:bg-blue-800  font-medium rounded text-1xl px-5 py-2.5  dark:bg-blue-600  ">Calculate</button>
+                  </div>
+                  <div class="border rounded flex items-center flex-col my-element "> 
+                    <img class="mt-10"  src="images/ellipse.png" alt="">
+                    <h1 id="ellipse-name" class="text-2xl font-bold	mt-8 text-gray-700">Ellipse</h1>
+                    <h5 class="mt-2 text-slate-500">Area (A) = πab</h5>
+                    <div class="flex items-center justify-items-center	mt-2">
+
+                      <input id="ellipse-a-input" class="appearance-none block w-full mx-5 mt-4  bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="a"> 
+                      <h3 class="mt-3">cm</h3>
+
+                      <input id="ellipse-b-input" class="appearance-none block mx-5 w-full mt-4 bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="b">
+                      <h3 class="mt-3 mr-5 ">cm</h3>
+                    </div>
+                    <button id="6th-btn-ellipse"  type="button" class="text-white mt-5 mb-5 w-11/12  py-2.5 mb-2  bg-blue-500 hover:bg-blue-800  font-medium rounded text-1xl px-5 py-2.5  dark:bg-blue-600  ">Calculate</button>
+                  </div>
+              </div>
+              </div>
+              <!-- Area Calculation-html -->
+              <div class=" h-auto md:ml-5  ml-5 border rounded md:w-96 mt-5">
+                <h1 class="text-center mt-5 text-3xl font-bold text-gray-700">Area Calculation</h1>
+                <hr class="w-60 border border-black	 mx-auto">
+                <!-- ----------------------------------- -->
+                <div id="set-section-area" class="mt-3 ml-1  text-slate-600 ml-1 px-1  "> 
+                  <!-- <h1>test</h1> -->
+
+                  <!-- --------- -->
+                </div>
+              </div>
+            </div>
+    </section>
+<!-- <JavaScript>Link-add</JavaScript> -->
+    <script src="js/calculation.js"></script>
+    <script src="js/utilitis.js"></script>
+    <script src="js/randomColor.js"></script>
+</body>
+</html>
