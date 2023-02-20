@@ -63,7 +63,7 @@ const outputt = findarry(arrr);
 console.log(outputt);
 
 
-// ---------------Gaja
+// ---------------Gaja-chatgpt
 
 function findarry (aray){
     let sumodd = 0;

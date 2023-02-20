@@ -11,10 +11,10 @@ document.getElementById('inputBoxJs').addEventListener('keyup',function(eventtex
         else if(textConf === 'sajeeb'){
             confmBtndlt.style.display = 'block';
         }
+        
         else {
             confmBtndlt.setAttribute('disabled', true);
         }
-        
 })
 
 document.getElementById('inputBtnJs').addEventListener("click",function(){
