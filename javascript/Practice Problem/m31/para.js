@@ -21,8 +21,60 @@ console.log(threeLin);
 // parameter. Add these two parameters and return the result.
 
  const defaultParamiterFuntion = (a, b = 20) => a + b;
- console.log(defaultParamiterFuntion(5))
+ console.log(defaultParamiterFuntion(5));
 
 
 //  Practice Problem 2
 
+// Write an arrow function where it will do the following:
+// a) It will take an array where the array elements will be the
+// name of your friends
+
+// b) Check if the length of each element is even, push elements
+// with even length to a new array and return the result
+
+// // Print the result./
+
+const arayFriendsFuntion = (arayFriends) =>{
+    let newAray = [];
+    for (const friends of arayFriends){
+        const friendsLength = friends.length;
+        if(friendsLength % 2 == 0){
+            newAray.push(friends);  
+        }  
+    } 
+    return newAray;  
+}
+
+const arayFriends = ["redowan", "sajeeb", "phero7", "programing7", "coder", "help", "bd1","go","bro"];
+console.log(arayFriendsFuntion(arayFriends));
+
+// Practice Problem 3
+// Write an arrow function where it will do the following:
+// a) Square each array element
+// b) Calculate the sum of the squared elements
+// c) Return the average of the sum of the squared elements
+// Print the result.
+
+const sumSquarNumber = numbers =>{
+    const numberLnts = numbers.length;
+    let sum = 0;
+    for (const number of numbers){
+        const squared = Math.pow(number,2);
+        sum = squared + sum;
+    }
+    return (sum / numberLnts);
+}
+const number = [5,5,5,8,58];
+console.log(sumSquarNumber(number));
+
+// ----------------------------------------
+// Practice Problem 4
+// Write an arrow function where it will do the following:
+// a) It will take two array inputs
+// b) Combine the two arrays and assign them in a new array
+// c) Find the maximum number from the new array and return the
+// result
+// Print the result.
+
+-----------
