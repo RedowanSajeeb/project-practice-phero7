@@ -53,3 +53,42 @@ let data = {
     ]
 };
 console.log(data.Location[0].city);
+
+// Practice Problem: Access Object values
+
+let dataExt = {
+    LocationIndia:[
+        {
+            lattitul: '34.5 , 37.8',
+            logtatoti: '98.77 , 58.7',
+            city: 'ZIndia',
+            country: 'India',
+        }
+
+    ],
+    LocationBD:[
+        {
+            lattitul: '34.5 , 37.8',
+            logtatoti: '98.77 , 58.7',
+            city: 'Bd',
+            country: 'India',
+        },
+        {
+            lattitul: '34.5 , 37.8',
+            logtatoti: '98.77 , 58.7',
+            city: 'Cnd-bd',
+            country: 'India',
+        }
+
+    ],
+    LocationCnd:[
+        {
+            lattitul: '34.5 , 37.8',
+            logtatoti: '98.77 , 58.7',
+            city: 'Cnd',
+            country: 'India',
+        }
+
+    ]
+};
+console.log(dataExt.LocationBD[1].city);
