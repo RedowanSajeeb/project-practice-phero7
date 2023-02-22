@@ -26,3 +26,10 @@ array.filter() method.
 const givenSayAray = [33, 50, 79, 78, 90, 101, 30 ];
 const sayresult = givenSayAray.filter(x => x % 10 === 0 );
 // console.log(sayresult);
+
+/* 3) Now do the same task of question 2. But do this using array.find()
+method. Then compare the output of question 2 & question 3. */
+
+const givenSayArayFiLTTER = [33, 50, 79, 78, 90, 101, 30 ];
+const sayresultfILTTER = givenSayArayFiLTTER.find(x => x % 10 === 0 );
+console.log(sayresultfILTTER);
