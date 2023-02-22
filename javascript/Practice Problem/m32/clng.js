@@ -29,3 +29,12 @@ const peopleR = [
 ];
 const reduceSumResult = peopleR.reduce((toralx , peopletx) => toralx + peopletx.age,0);
 console.log(reduceSumResult);
+
+// -----------
+// Practice Problem: Access Object values
+
+const student = {
+    name:'fedi',
+    age:26,
+}
+console.log(student.age);
