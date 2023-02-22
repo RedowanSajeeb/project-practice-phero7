@@ -23,4 +23,4 @@ for (const forloopOf of anArray1forloop){
 }
    console.log(same);
 
-// -----------------
+// ----------------
