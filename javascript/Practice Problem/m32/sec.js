@@ -5,7 +5,7 @@ array.reduce() method. */
 
 const anArray = [ 1, 9, 17, 22 ];
 const reduceArray = anArray.reduce((total, ammount) => total + ammount);
-// console.log(reduceArray);
+console.log(reduceArray);
 
 const sum = 0;
 const anArray1 = [ 1, 9, 17, 22 ];
