@@ -38,3 +38,18 @@ const student = {
     age:26,
 }
 console.log(student.age);
+
+// Practice Problem: Access Object values
+
+let data = {
+    Location:[
+        {
+            lattitul: '34.5 , 37.8',
+            logtatoti: '98.77 , 58.7',
+            city: 'Hyderabad',
+            country: 'India',
+        }
+
+    ]
+};
+console.log(data.Location[0].city);
