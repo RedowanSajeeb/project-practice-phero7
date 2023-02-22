@@ -13,10 +13,19 @@ const people = [
     {name: 'Rina', age:15},
     {name: 'Susmita', age:22},
 
-]
+];
     let summage = 0;
-for (const elements of people.age){
-    summage += elements;
+for (const elements of people){
+    summage += elements.age;
 
 }
-console.log(summage);
+// console.log(summage);
+
+const peopleR = [
+    {name: 'Menna', age:20},
+    {name: 'Rina', age:15},
+    {name: 'Susmita', age:22},
+
+];
+const reduceSumResult = peopleR.reduce((toralx , peopletx) => toralx + peopletx.age,0);
+console.log(reduceSumResult);
