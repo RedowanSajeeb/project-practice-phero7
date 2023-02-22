@@ -92,3 +92,7 @@ let dataExt = {
     ]
 };
 console.log(dataExt.LocationBD[1].city);
+
+
+// -------------------------------------------------
+
