@@ -42,3 +42,13 @@ const abar2p = (c,b) =>{
 
 }
 console.log(abar2p(2,2));
+
+// 4
+
+/* 5-Differences Between Arrow and Regular Functions */
+// ৪.৫. জাভাস্ক্রিপ্ট এর var, let, const এর মধ্যে প্রার্থক্য কি?
+
+// 5
+
+const onakGulanArray = [5,6,7,8,9,10,15,50,100].map(x => x*5);
+console.log(onakGulanArray);
