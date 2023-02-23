@@ -17,8 +17,17 @@ const boj = {
 const arrayF5 = (x) => x /5;
 console.log(arrayF5(25));
 
+// 3.2
 const array2paramiterFunction = (x,y) => {
     const x2 = x + y + 4;
     return  x2*2
 }
 console.log(array2paramiterFunction(5,2));
+
+// 3.3
+
+// const p3Paramiter = (x,y,z) => {
+//     return x*y*z
+// }
+const p3Paramiter = (x,y,z) => x*y*z;
+console.log(p3Paramiter(5,5,5));
