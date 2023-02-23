@@ -33,5 +33,7 @@ const studentData = [
 
 const b1 = studentData[0].details[1].gradingDetails[0].grade;
 const b2 = studentData[1].details[0].gradingDetails[0].grade;
+const d = studentData[1].details[1].gradingDetails[0].grade
 console.log(b1);
 console.log(b2);
+console.log(d);
