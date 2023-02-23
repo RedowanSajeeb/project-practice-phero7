@@ -9,10 +9,10 @@ const boj = {
 }
  const tmString = `
   First Pershon Name ${cngdHoyaNah} Done Wather ${wather} and obj ${boj.name.boj} && ${boj.secName}
- 
  `
  console.log(tmString);
 
 // 3.1
 
-
+const arrayF5 = (x) => x /5;
+console.log(arrayF5(25));
