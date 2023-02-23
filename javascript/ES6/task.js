@@ -16,3 +16,9 @@ const boj = {
 
 const arrayF5 = (x) => x /5;
 console.log(arrayF5(25));
+
+const array2paramiterFunction = (x,y) => {
+    const x2 = x + y + 4;
+    return  x2*2
+}
+console.log(array2paramiterFunction(5,2));
