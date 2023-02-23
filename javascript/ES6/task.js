@@ -52,3 +52,8 @@ console.log(abar2p(2,2));
 
 const onakGulanArray = [5,6,7,8,9,10,15,50,100].map(x => x*5);
 console.log(onakGulanArray);
+
+// 6 [ চ্যালেঞ্জিং।
+ const oddArray = [5,6,7,8,9,10,11,12,13,15,17,18,19,20,33,34,35,1037];
+  const oddFunction = oddArray.filter(x => x%2 !== 0);
+  console.log(oddFunction);
