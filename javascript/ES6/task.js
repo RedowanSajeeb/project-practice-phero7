@@ -31,3 +31,14 @@ console.log(array2paramiterFunction(5,2));
 // }
 const p3Paramiter = (x,y,z) => x*y*z;
 console.log(p3Paramiter(5,5,5));
+
+// 3.4
+
+const abar2p = (c,b) =>{
+    const First1  = c + 2;
+    const sec2 = b+2
+    const result = First1 + sec2;
+    return result*2
+
+}
+console.log(abar2p(2,2));
