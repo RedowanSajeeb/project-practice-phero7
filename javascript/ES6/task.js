@@ -108,3 +108,6 @@ const {cityTime: newd} = objectpro;
 console.log(newd);
 
 // -------------
+const dArray = [2,3,5,48,100];
+const [,,three] = dArray;
+console.log(three);
