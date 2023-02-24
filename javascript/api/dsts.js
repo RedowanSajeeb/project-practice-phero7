@@ -10,7 +10,7 @@ function uBtn(users) {
   for (const user of users) {
     // console.log(user.name);
     const li = document.createElement('li');
-    li.innerText = user.name;
+    li.innerText = user.address.city;
     uldiv.appendChild(li);
 
   }
