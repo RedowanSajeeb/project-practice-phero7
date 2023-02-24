@@ -92,3 +92,19 @@ const object = [{
 
 const objectFuntion = object.find(object => object.price === 5000);
 console.log(objectFuntion);
+
+
+// ---
+// 8
+
+const objectpro = {
+
+    name: 'pro-coder',
+    years: 5,
+    cityTime: "canada"
+}
+
+const {cityTime: newd} = objectpro;
+console.log(newd);
+
+// -------------
