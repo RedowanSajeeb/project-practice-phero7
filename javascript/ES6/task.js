@@ -57,3 +57,38 @@ console.log(onakGulanArray);
  const oddArray = [5,6,7,8,9,10,11,12,13,15,17,18,19,20,33,34,35,1037];
   const oddFunction = oddArray.filter(x => x%2 !== 0);
   console.log(oddFunction);
+
+//   7
+
+const object = [{
+    name:'sajeeb',
+    city:'bd',
+    work:'programmer',
+    time:'night-day',
+    price: 5000,
+    years: 5,
+    motivet: "go-go-Ahead"
+},
+{
+    name:'sajeeb',
+    city:'bd',
+    work:'programmer',
+    time:'night-day',
+    price: 500,
+    years: 5,
+    motivet: "go-go-Ahead"
+}
+,
+
+{
+    name:'sajeeb',
+    city:'bd',
+    work:'programmer',
+    time:'night-day',
+    price: 50,
+    years: 5,
+    motivet: "go-go-Ahead"
+}];
+
+const objectFuntion = object.find(object => object.price === 5000);
+console.log(objectFuntion);
