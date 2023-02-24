@@ -117,3 +117,24 @@ console.log(three);
 
 const para3 = (a, b, c = 7) => a + b + c;
 console.log(para3(5,3));
+
+/* অপশনাল */
+
+// 11
+var person = {
+    "name":"Ram",
+    "age":27,
+    "vehicles": {
+       "car":"limousine",
+       "car-Cunt": [1,2,5,8,48,6,50,10],
+       "bike":"ktm-duke",
+       "airlines":{
+          "lufthansa" : "Air123",
+           "British airways" : "Brt707"
+       }
+    }
+ }
+ const dot = person.vehicles?.["car-Cunt"];
+ console.log(dot);
+
+//  -------------------------------All_done----------------
