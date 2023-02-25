@@ -39,7 +39,9 @@ const DesplayLoadDetails = (code) => {
         <h2>country name: ${paramitar.name.common} </h2>
         <img src="${paramitar.flags.png}" alt="Image description">
        <div><img src="${paramitar.maps.openStreetMaps}" alt="Image description"></div> 
+       
 
+       <h2>country capital: ${paramitar.capital} </h2>
        <h2>country region: ${paramitar.region} </h2>
 
         
