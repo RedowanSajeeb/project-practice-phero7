@@ -55,6 +55,11 @@ const desplaymeldetails = meal =>{
   const dtails = document.getElementById('dtails');
   dtails.innerHTML = `
   <img class ="img-fluid" src="${meal.strMealThumb}" alt="xphoto" >
+  <h3 class ="mt-3">strCategory:${meal.strCategory}</h3>
+  <p class ="mt-3">strArea:${meal.strArea}</p>
+  <p class ="mt-3">strArea:${meal.strTags}</p>
+ 
+  <a href="${meal.strYoutube}">Visit!youtube</a>
   <p class ="mt-3">${meal.strInstructions}</p>
   
   `
