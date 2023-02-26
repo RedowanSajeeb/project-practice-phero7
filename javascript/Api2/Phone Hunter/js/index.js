@@ -8,9 +8,19 @@ const phonsLoadHunt = async(phoneSearchBox) =>{
 const displayPhonesHunts = phones =>{
     const phoneContainar = document.getElementById('phoneContainner');
     phoneContainar.textContent ="";
+    phones = phones.slice(0,25);
+    /* desplay-30+Phones onaly *
+    // -------------------------------------
     
-    /* desplay-20+Phones onaly */
-
+    /* -------------error--no-phone */
+   const dblocPage = document.getElementById('d-bloc-section');
+     if(phones.length === 0){
+        dblocPage.classList.remove('d-none')
+     }
+     else{
+        dblocPage.classList.add('d-none')
+     }
+// ------------------------
     phones.forEach(phone => {
         const phoneDiv = document.createElement('div');
         phoneDiv.classList.add('col');
@@ -46,4 +56,4 @@ document.getElementById('btn-click').addEventListener('click', function(){
 
 
 
-phonsLoadHunt();
+phonsLoadHunt('a');
