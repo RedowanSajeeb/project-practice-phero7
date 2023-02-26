@@ -34,8 +34,10 @@ const displayPhonesHunts = (phones, dataLemit) => {
         <img  src="${phone.image}" class=" img-fluid p-5" alt="...">
         <div class="card-body">
           <h5 class="card-title">${phone.phone_name}</h5>
+         
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
+          <button onclick="loadPhoneDtiles('${phone.slug}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phonehUndModel">ShowMore...</button>
+          </div>
       </div>
         `;
     phoneContainar.appendChild(phoneDiv);
@@ -55,6 +57,14 @@ document.getElementById("btn-click").addEventListener("click", function () {
   // const emtay = document.getElementById('example-search-input')
 
   // emtay.value = " ";
+
+});
+//   javascript input field enter key event handle
+document.getElementById('example-search-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      // code for enter
+      prossesSearch(10);
+    }
 });
 
 /*     spinner-loder
@@ -75,5 +85,25 @@ document.getElementById("btn-show-btn").addEventListener("click", function () {
   const emtay = document.getElementById("example-search-input");
   emtay.value = " ";
 });
+
+
+const loadPhoneDtiles = async id =>{
+    const url = `https://openapi.programming-hero.com/api/phone/${id}`
+    const res = await fetch(url);
+    const data = await res.json();
+    loadPhoneDtilesdesplay(data.data);
+
+
+}
+const loadPhoneDtilesdesplay = phone => {
+    document.getElementById('phonehUndModelLabel').innerText = phone.name;
+    document.getElementById('phonehUndModelLabel2').innerText = phone.releaseDate ? phone.releaseDate :"CommingSoon..." ;
+    document.getElementById('phonehUndModelLabel3').innerText = phone.mainFeatures.storage ? phone.mainFeatures.storage:"faka" ;
+    document.getElementById('phonehUndModelLabel4').innerText = phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize :"faka" ;
+    document.getElementById('phonehUndModelLabel5').innerText = phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet :"faka" ;
+    document.getElementById('phonehUndModelLabel6').innerText = phone.mainFeatures.memory ? phone.mainFeatures.memory:"faka" ;
+
+}
+
 
 phonsLoadHunt("a");
