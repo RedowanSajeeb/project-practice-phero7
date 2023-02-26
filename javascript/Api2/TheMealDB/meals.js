@@ -17,7 +17,7 @@ const displayMeals = (meals) => {
     divmeal.classList.add("col");
     divmeal.innerHTML = `
 
-    <div class="card h-100">
+    <div class="card h-100 ">
     <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
     <div class="card-body">
       <h4 class="card-title text-success">${meal.strMeal}</h4>
@@ -67,4 +67,4 @@ const desplaymeldetails = meal =>{
 }
 
 
-firstMealdbLoad();
+firstMealdbLoad('cake');
