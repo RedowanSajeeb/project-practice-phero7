@@ -5,3 +5,18 @@
 // false
 
 // --------
+
+// console.log(true === "true");
+// false.
+
+const arrowf = paramiter =>{
+    if(isNaN(paramiter)){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+const output = arrowf();
+// console.log(output);
