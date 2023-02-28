@@ -49,3 +49,31 @@ console.log(`You are amazing!`);
     4. Print result of num1/num2 if operation is “divide”
     5. Print result of num1%num2 if operation is “modulus”
     6. Else print “Invalid operation” */
+    const performArithmeticOperation = (num1, num2, operation) => {
+        switch(operation) {
+          case 'add':
+            console.log(num1 + num2);
+            break;
+          case 'subtract':
+            console.log(num1 - num2);
+            break;
+          case 'multiply':
+            console.log(num1 * num2);
+            break;
+          case 'divide':
+            console.log(num1 / num2);
+            break;
+          case 'modulus':
+            console.log(num1 % num2);
+            break;
+          default:
+            console.log('Invalid operation');
+        }
+      };
+      
+      performArithmeticOperation(10, 5, 'add'); // Output: 15
+performArithmeticOperation(10, 5, 'subtract'); // Output: 5
+performArithmeticOperation(10, 5, 'multiply'); // Output: 50
+performArithmeticOperation(10, 5, 'divide'); // Output: 2
+performArithmeticOperation(10, 5, 'modulus'); // Output: 0
+performArithmeticOperation(10, 5, 'invalid'); // Output: Invalid operation
