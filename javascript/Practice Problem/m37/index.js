@@ -101,4 +101,4 @@ COMMON INTERVIEW QUESTIONS
 8) How to use the JavaScript callback function?
 9) Explain closure in JavaScript
 10) Explain passed by value and passed by reference. */
-// -
+// -1
