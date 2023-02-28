@@ -19,4 +19,4 @@ const arrowf = paramiter =>{
 
 }
 const output = arrowf();
-console.log(output);
+// console.log(output);
