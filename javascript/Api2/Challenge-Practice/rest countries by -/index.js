@@ -1,4 +1,3 @@
-
 // ---------------------------
 const commonFuntion = async (jsonDanamix) => {
   const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
@@ -10,6 +9,10 @@ const commonFuntion = async (jsonDanamix) => {
     commonFuntionaDesplayShow(data);
   } catch (error) {}
 };
+
+commonFuntion('asia')
+
+
 const commonFuntionaDesplayShow = (africas) => {
   console.log(africas);
   africas.forEach((africa) => {
@@ -22,7 +25,14 @@ const commonFuntionaDesplayShow = (africas) => {
     divMakes.classList.add("row", "col-lg-3", "lg-g-3");
 
     divMakes.innerHTML = `
-        <h5 class="lg-m-2 p-2  bg-body-secondary border rounded-1"> ${africa.name.common}</h5>
+<div class ="lg-m-2 p-2  bg-body-secondary border rounded-1">
+        <h5 class=""> ${africa.name.common}
+        <img class ="img-fluid mt-2 p-2" src="${africa.flags.png}" alt="Girl in a jacket" ></h5>
+        <h5 class="">region: ${africa.region}</h5>
+</div>
+        
+        
+        
     
         `;
     showParentIDdiv.appendChild(divMakes);
@@ -44,21 +54,20 @@ const myAmericas = async () => {
 
 // myAsia
 const myAsia = async () => {
-    const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
-    showParentIDdiv.innerHTML = "";
-    commonFuntion("Asia");
-  };
+  const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
+  showParentIDdiv.innerHTML = "";
+  commonFuntion("Asia");
+};
 // myEurope
 const myEurope = async () => {
-    const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
-    showParentIDdiv.innerHTML = "";
-    commonFuntion("Europe");
-  };
-  
+  const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
+  showParentIDdiv.innerHTML = "";
+  commonFuntion("Europe");
+};
+
 // myOceania
 const myOceania = async () => {
-    const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
-    showParentIDdiv.innerHTML = "";
-    commonFuntion("Oceania");
-  };
-  
+  const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
+  showParentIDdiv.innerHTML = "";
+  commonFuntion("Oceania");
+};
