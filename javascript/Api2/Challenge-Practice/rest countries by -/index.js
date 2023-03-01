@@ -1,8 +1,8 @@
 // ---------------------------
-const commonFuntion = async (jsonDanamix) => {
+const commonFuntion = async (region, jsonDanamix) => {
   const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
   showParentIDdiv.innerHTML = "";
-  const url = `https://restcountries.com/v3.1/region/${jsonDanamix}`;
+  const url = `https://restcountries.com/v3.1/${region}/${jsonDanamix}`;
   try {
     const res = await fetch(url);
     const data = await res.json();
@@ -10,7 +10,7 @@ const commonFuntion = async (jsonDanamix) => {
   } catch (error) {}
 };
 
-commonFuntion('asia')
+commonFuntion("region",'asia')
 
 
 const commonFuntionaDesplayShow = (africas) => {
@@ -27,14 +27,10 @@ const commonFuntionaDesplayShow = (africas) => {
     divMakes.innerHTML = `
 <div class ="lg-m-2 p-2  bg-body-secondary border rounded-1">
         <h5 class=""> ${africa.name.common}
-        <img class ="img-fluid mt-2 p-2" src="${africa.flags.png}" alt="Girl in a jacket" ></h5>
+        <img class ="img-fluid mt-2 p-2" src="${africa.flags.png}" alt="xphoto" ></h5>
         <h5 class="">region: ${africa.region}</h5>
-</div>
-        
-        
-        
-    
-        `;
+</div> 
+        `
     showParentIDdiv.appendChild(divMakes);
   });
 };
@@ -42,32 +38,59 @@ const commonFuntionaDesplayShow = (africas) => {
 const myAfrica = async () => {
   const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
   showParentIDdiv.innerHTML = "";
-  commonFuntion("Africa");
+  commonFuntion("region","Africa");
 };
 
 // myAmericas
 const myAmericas = async () => {
   const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
   showParentIDdiv.innerHTML = "";
-  commonFuntion("Americas");
+  commonFuntion("region","Americas");
 };
 
 // myAsia
 const myAsia = async () => {
   const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
   showParentIDdiv.innerHTML = "";
-  commonFuntion("Asia");
+  commonFuntion("region","Asia");
 };
 // myEurope
 const myEurope = async () => {
   const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
   showParentIDdiv.innerHTML = "";
-  commonFuntion("Europe");
+  commonFuntion("region","Europe");
 };
 
 // myOceania
 const myOceania = async () => {
   const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
   showParentIDdiv.innerHTML = "";
-  commonFuntion("Oceania");
+  commonFuntion("region","Oceania");
 };
+
+
+// cityBtn
+const mylima = async () => {
+    const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
+    showParentIDdiv.innerHTML = "";
+    commonFuntion("capital","lima");
+  };
+//   span 
+
+const span = async () => {
+    const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
+    showParentIDdiv.innerHTML = "";
+    commonFuntion("lang","spa");
+  };
+//   german
+const german = async () => {
+    const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
+    showParentIDdiv.innerHTML = "";
+    commonFuntion("lang","german");
+  };
+//   Peruánská
+const pero = async () => {
+    const showParentIDdiv = document.getElementById("panelsStayOpen-collapseOne");
+    showParentIDdiv.innerHTML = "";
+    commonFuntion("translation","Peruánská");
+  };
