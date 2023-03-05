@@ -14,6 +14,8 @@ const loadTamdatacallShowDisplay = (tamDdata) => {
   setFuncation("tamC", tamDdata.main.temp);
   setFuncation("wmain", tamDdata.weather[0].main);
 
+  setFuncation("city", tamDdata.name);
+
   //   const tamC = (document.getElementById("tamC").innerText = tamDdata.main.temp);
   //   document.getElementById("wmain").innerText = tamDdata.weather[0].main;
 };
@@ -26,7 +28,7 @@ const setFuncation = (id, text) => {
 document.getElementById("search-btn").addEventListener("click", function () {
   const inputvalu = document.getElementById("location-input").value;
   loadTamdatacall(inputvalu);
-  document.getElementById("city").innerText = inputvalu;
+//   document.getElementById("city").innerText = inputvalu;
   document.getElementById("location-input").value = "";
 });
 
