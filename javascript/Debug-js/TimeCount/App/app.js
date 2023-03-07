@@ -12,4 +12,5 @@ function stopBtnfun() {
 function resetBtnfun() {
   clearInterval(intervalId);
   setTime.innerText = 00;
+  num = 0
 }
