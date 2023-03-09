@@ -3,8 +3,8 @@ function getInputFieldValueById(inputFieldId) {
   const inputFieldValueString = inputField.value;
   // console.log(inputFieldValueString);
   const inputFieldValue = parseFloat(inputFieldValueString);
-  return inputFieldValue;
   inputField.value = "";
+  return inputFieldValue;
 }
 
 function getTextElementValueById(elementId) {
