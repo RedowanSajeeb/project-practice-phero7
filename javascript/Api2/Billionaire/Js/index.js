@@ -27,7 +27,7 @@ const billionairesManCall = (mans) => {
                        
                           <h6 class="card-text">source: <small class="">${man.source}</small></h6>
 
-                          <button onclick= "lodModalDetails()" type="button" class="btn btn-primary mt-2" style="background-color: #0E1B34;" data-bs-toggle="modal" data-bs-target="#hardWorkCillmodelid">General Information<button>
+                          <button onclick= "loadSingleBilioner()" type="button" class="btn btn-primary mt-2" style="background-color: #0E1B34;" data-bs-toggle="modal" data-bs-target="#hardWorkCillmodelid">General Information<button>
                     </div>
                       </div>
                     </div>
@@ -45,7 +45,24 @@ cardIDget.innerHTML = "";
 document.getElementById("loadMoreBtn").addEventListener("click", function () {
   timeBillionaires("limit=400");
 });
+
+
 // myFunctionmodal()
+
+const loadSingleBilioner = (id) =>{
+  fetch("https://forbes400.onrender.com/api/forbes400?limit=400")
+  .then(res => res.json())
+  .then(data => showData(data , id))
+}
+
+const showData = (data, id) =>{
+// console.log(data,id);
+ data.find(item => item.rank === id);
+document.getElementById('modalLabelIdHardWork').innerText = data[0].person.name
+
+}
+
+
 
 
 timeBillionaires("limit=10");
