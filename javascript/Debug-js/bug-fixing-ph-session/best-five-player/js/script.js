@@ -15,10 +15,12 @@ for(const button of buttons){
         if(selectedPlayer.children.length <= 4){
             button.classList.add('disabled');
             addPlayer(button.parentNode.children[0].innerText);
+            
         } else{
             button.classList.remove('disabled');
-            addPlayer(button.parentNode.children[0].innerText)
-            alert('5 Played already Selected');
+            // addPlayer(button.parentNode.children[0].innerText)
+          return alert('5 Played already Selected Showing an error message');
+            
         }
     })
 } 
@@ -39,17 +41,41 @@ function getValueOfElement(elementId, value){
 
 // Budgets add event listeners
 document.getElementById('calculate_budget').addEventListener('click', function(){
+    
     const perPlayerBudget = getInputValue('per_player_budget');
+    
+    if(perPlayerBudget.value = ""){
+        return alert('please give me a valid number')
+        
+    }
+    document.getElementById("per_player_budget").value ="";
     let totalPlayerExpense =  perPlayerBudget * 5;
+    if((isNaN(perPlayerBudget))){
+        return alert('please give me a valid number')
+        
+    }
+   
+    
     getValueOfElement( 'player_expense', totalPlayerExpense)  
+    
 })
+
 document.getElementById('calculate_total_budget').addEventListener('click', function(){
     const perPlayerBudget = document.getElementById('player_expense');
+    
+    // if(isNaN( perPlayerBudget.value)){
+    //     return alert('please give me a valid number')
+        
+    // }
     const playerTotalBudget = parseFloat(perPlayerBudget.innerText)
+    
     const managerBudget = getInputValue('manager_budget');
+ 
     const coachBudget = getInputValue('coach_budget');
 
     let totalExpense = playerTotalBudget + managerBudget + coachBudget;
         getValueOfElement( 'player_total_expense', totalExpense)
+        document.getElementById("manager_budget").value ="";
+        document.getElementById("coach_budget").value ="";
 })
 
