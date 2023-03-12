@@ -1,19 +1,37 @@
 
 //------------- handle search button-----------
-const searchFood = () => {
-    const searchField = document.getElementById('mealInput'); 
-    const searchData = searchField.value      
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchData}`;
+const searchFood = (cake) => {
+    const searchField = document.getElementById('mealInput');
+   const  searchtEXT = searchField.value
+    if(searchField.value === ""){
+        document.getElementById("errorMessage").innerText = "তুমি কিছু লিখো নাই 🙄"
+        return
+    }
+    else if(searchField)
+    searchField.value="" 
+    // const searchData = searchField.value     
+    // displayMealInfo.innerText="";
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchtEXT}`;
     fetch(url)
     .then(res => res.json())
     .then(data => displayMealInfo(data.meals))
+    .catch(error =>{
+        document.getElementById("errorMessage").innerText = "আজাইরা খোঁজা-খুঁজি বাদ দিয়া ঘুমাও 😐"
+    })
+    document.getElementById('mealInput').value = "";
+            errorMessage.innerText = "";
 }
 
 const displayMealInfo = mealData => {
-    console.log(mealData);
+    
+    // console.log(mealData);
+    // displayMealInfo.innerText="";
     const mealContainer = document.getElementById('mealCard');
+    mealContainer.innerText ="";
     mealData.forEach(item => {
+        
         const foodItemName = document.createElement('div');
+        
         foodItemName.className = 'meal-items';
         itemPosition = item.idMeal;
         const mealInformation = `
@@ -26,6 +44,7 @@ const displayMealInfo = mealData => {
         });
         mealContainer.appendChild(foodItemName);
     });
+    
 }
 
 
