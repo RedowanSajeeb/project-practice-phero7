@@ -110,10 +110,16 @@ const changeSlide = (index) => {
 }
 
 searchBtn.addEventListener('click', function () {
+  const search = document.getElementById('search');
+  if (search.value == "") {
+    alert("Name must be filled out");
+    return ;
+  }
   document.querySelector('.main').style.display = 'none';
   clearInterval(timer);
-  const search = document.getElementById('search');
+  
   getImages(search.value)
+  search.value ="";
   sliders.length = 0;
 })
 
