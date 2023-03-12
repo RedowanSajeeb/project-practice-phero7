@@ -54,17 +54,22 @@ const mealIngredientsInfo = mealItemName => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItemName}`;
 fetch(url)
         .then(response => response.json())
-        .then(data => displayDetails(data))
+        .then(data => displayDetails(data.meals))
+        
 }
 
 //meal ingredients details information
 
 const displayDetails = mealItemDetails => {
+    // console.log(mealItemDetails);
     const mealItemsInformation = document.getElementById('mealItemsInfo');
+    mealItemsInformation.innerText="";
     mealItemDetails.forEach(items => {
-        const mealItemsInformations = document.innerHTML('div');
+        // console.log(items);
+       
+        const mealItemsInformations = document.createElement('div');
         mealItemsInformations.className = 'ingredients-info';
-        console.log(items.strMeal);
+        // console.log(items.strMeal);
         const itemsName = document.createElement('h1');
         const ingredients = document.createElement('h5');
         ingredients.innerText = 'Ingredients';
@@ -90,6 +95,13 @@ const displayDetails = mealItemDetails => {
          <li>${items.strIngredient13}</li>
         `
         ul.innerHTML = li;
+//         Object.values(items).forEach((ingredient) => {
+//   if (ingredient && ingredient.startsWith('strIngredient')) {
+//     const li = document.createElement('li');
+//     li.textContent = ingredient;
+//     ul.appendChild(li);
+//   }
+// });
         mealItemsInformations.appendChild(itemsName);
         mealItemsInformations.appendChild(ingredients);
         mealItemsInformations.appendChild(ul);
