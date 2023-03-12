@@ -6,10 +6,11 @@ const searchFood = () => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchData}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => displayMealInfo(data))
+    .then(data => displayMealInfo(data.meals))
 }
 
 const displayMealInfo = mealData => {
+    console.log(mealData);
     const mealContainer = document.getElementById('mealCard');
     mealData.forEach(item => {
         const foodItemName = document.createElement('div');
