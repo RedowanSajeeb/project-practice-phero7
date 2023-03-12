@@ -34,7 +34,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+    return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -59,6 +59,8 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
     const image = post.image;
+    const image2 = post.userImage;
+    const userName = post.userName;
     const div = document.createElement( "article" );
     div.classList.add( "post" );
     div.innerHTML = `
@@ -69,9 +71,9 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image}" alt="User Picture" />
+                    <img src="${image2}" alt="User Picture" />
                   </a>
-                  <a href="#" class="post__user">phero</a>
+                  <a href="#" class="post__user">${userName}</a>
                 </div>
 
                 <button class="post__more-options">
@@ -118,7 +120,7 @@ const createPost = (post) => {
                     </a>
 
                     <span>Liked by
-                      <a class="post__name--underline" href="#">Shakib Bro</a> and
+                      <a class="post__name--underline" href="#">${userName}</a> and
                       <a href="#">73 others</a></span>
                   </div>
 
