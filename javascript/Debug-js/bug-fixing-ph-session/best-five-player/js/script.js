@@ -70,9 +70,16 @@ document.getElementById('calculate_total_budget').addEventListener('click', func
     const playerTotalBudget = parseFloat(perPlayerBudget.innerText)
     
     const managerBudget = getInputValue('manager_budget');
- 
+//  console.log(managerBudget);
     const coachBudget = getInputValue('coach_budget');
-
+if(managerBudget === "" ){
+   return alert("please give me a valid number")
+}
+// if((typeof coachBudget === "string") &&(typeof managerBudget === "string")){
+//     document.getElementById("manager_budget").value ="";
+//     document.getElementById("coach_budget").value ="";
+//     return alert("please give me a valid number")
+// }
     let totalExpense = playerTotalBudget + managerBudget + coachBudget;
         getValueOfElement( 'player_total_expense', totalExpense)
         document.getElementById("manager_budget").value ="";
