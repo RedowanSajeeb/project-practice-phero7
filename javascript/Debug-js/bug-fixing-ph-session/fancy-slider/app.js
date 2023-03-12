@@ -44,9 +44,15 @@ const selectItem = (event, img) => {
   if (item === -1) {
     sliders.push(img);
   } else {
-    alert('Hey, Already added !')
+
+    // alert('Hey, Already added !')
+
+    sliders = sliders.filter(slide => slide != img);
+    element.classList.remove("added")
   }
 }
+
+
 var timer
 const createSlider = () => {
   // check slider image length
@@ -68,6 +74,10 @@ const createSlider = () => {
   // hide image aria
   imagesArea.style.display = 'none';
   const duration = document.getElementById('doration').value || 1000;
+  if(duration.value > 1) {
+    alert("Name must be filled out");
+    return ;
+  }
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
@@ -121,8 +131,25 @@ searchBtn.addEventListener('click', function () {
   getImages(search.value)
   search.value ="";
   sliders.length = 0;
+
 })
 
 sliderBtn.addEventListener('click', function () {
   createSlider()
 })
+
+const search = document.getElementById('search');
+
+// Get the input field
+var input = document.getElementById("myInput");
+
+// Execute a function when the user presses a key on the keyboard
+search.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("search-btn").click();
+  }
+});
