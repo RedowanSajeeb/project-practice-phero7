@@ -18,3 +18,28 @@ const showDesplay =(x,y) =>{
   ul2.appendChild(make)
 
 }
+// ------------------------------
+const getLocaLStoragGet = () =>{
+ let cart = {}
+ const storCarT = localStorage.getItem('cart');
+ if(storCarT){
+    cart = JSON.parse(storCarT);
+ }
+return cart;
+
+}
+
+const savedStoreCard = (product, quntety) =>{
+    const cart = getLocaLStoragGet();
+   cart[product] = quntety;
+   const caritStingFy = JSON.stringify(cart)
+   localStorage.setItem('cart', caritStingFy)
+}
+const displayStore = () =>{
+    const saveCart = getLocaLStoragGet();
+    for(const prods in saveCart){
+        const quntaty = saveCart[prods];
+        showDesplay(prods, quntaty);
+    }
+}
+displayStore();
