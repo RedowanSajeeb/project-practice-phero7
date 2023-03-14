@@ -8,7 +8,7 @@ document.getElementById("valu2").value = " "
 
 // console.log(valu2,valu1);
 showDesplay(valu1,valu2)
-
+sevProduchToLocalStorage(valu1,valu2)
 }
 const showDesplay =(x,y) =>{
 //  console.log(x,y);
@@ -16,30 +16,32 @@ const showDesplay =(x,y) =>{
   const make = document.createElement('li')
   make.innerText = `${x} : ${y}`
   ul2.appendChild(make)
-
+  
 }
 // ------------------------------
-const getLocaLStoragGet = () =>{
- let cart = {}
- const storCarT = localStorage.getItem('cart');
- if(storCarT){
-    cart = JSON.parse(storCarT);
- }
-return cart;
 
-}
-
-const savedStoreCard = (product, quntety) =>{
-    const cart = getLocaLStoragGet();
-   cart[product] = quntety;
-   const caritStingFy = JSON.stringify(cart)
-   localStorage.setItem('cart', caritStingFy)
-}
-const displayStore = () =>{
-    const saveCart = getLocaLStoragGet();
-    for(const prods in saveCart){
-        const quntaty = saveCart[prods];
-        showDesplay(prods, quntaty);
+const getStorteShopingCart = () =>{
+    let cart = {}
+    const storatCard = localStorage.getItem('cart')
+    if(storatCard){
+        cart = JSON.parse(storatCard)
     }
+    return cart;
 }
-displayStore();
+const sevProduchToLocalStorage = (produch , quntaty) =>{
+    const cart = getStorteShopingCart();
+    cart[produch] = quntaty;
+    // console.log(cart);
+    const cartStingiFiy = JSON.stringify(cart);
+    localStorage.setItem('cart',cartStingiFiy)
+
+}
+const showDeslpaLocalStorag = () =>{
+    const savdCart = getStorteShopingCart();
+    for (const p in savdCart){
+        const qun = savdCart[p]
+        showDesplay(p,qun)
+    }
+    
+}
+showDeslpaLocalStorag();
