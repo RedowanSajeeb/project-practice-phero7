@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adbice || mahbub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-800 text-white">
+    <nav class="md:p-5 p-1">
+      <h1 class="text-center text-xl font-semibold">
+        <a
+          href=""
+          class="hover:text-green-400"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+        🌺
+      </h1>
+    </nav>
+
+    <!-- main section start -->
+    <section
+      class="container mx-auto flex justify-center items-center md:my-24 my-20"
+    >
+      <div class="md:w-2/5 p-2">
+        <div class="gap-2 flex justify-between py-14">
+          <input
+            id="searchInput"
+            class="text-base w-full rounded bg-gray-500 px-2 py-2 border font-roboto"
+            placeholder="Search any keyword"
+            type="text"
+          />
+          <button
+            onClick="getSearchInputValue()"
+            class="text-base rounded bg-gray-500 px-2 py-2 border font-roboto"
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
+        <div class="bg-gray-600 md:p-10 p-2 md:pb-5 rounded-lg w-full">
+          <div class="relative w-full h-full text-center">
+            <div id="rendomAdvice">
+              <p class="text-green-400 font-medium text-sm font-roboto">
+                ADVICE #...
+              </p>
+              <p class="text-2xl font-roboto text-center font-medium">
+                ‘‘Loading.....’’
+              </p>
+              <div class="inline-flex items-center justify-center w-full">
+                <hr
+                  class="w-64 h-[1px] my-8 bg-gray-400 border-0 rounded dark:bg-gray-700"
+                />
+                <div
+                  class="absolute px-4 -translate-x-1/2 bg-gray-600 left-1/2 dark:bg-gray-900"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-200 dark:text-gray-300"
+                    viewBox="0 0 24 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div
+                onClick="getRendomAdvice()"
+                class="absolute md:-bottom-10.5 -bottom-7 cursor-pointer w-10 bg-green-400 p-2.5 rounded-full"
+              >
+                <img
+                  class="w-full"
+                  src="./Assets/images/icons/Dice.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="contaienr mx-auto p-5 bottom-0 sticky">
+      <a href="" target="_blank" rel="noopener noreferrer" class="flex gap-2">
+        <img
+          class="rounded-full w-5 h-5"
+          src="https://avatars.githubusercontent.com/u/96831440?s=400&u=cc5b8e45e16a60475d94502a6a8f8c09499c2031&v=4"
+          alt=""
+        />
+        <p class="text-sm">Github Repository</p>
+      </a>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
