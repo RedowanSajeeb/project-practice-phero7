@@ -12,11 +12,14 @@ const datadisplayShow = data =>{
     countRyContainer.innerHTML = cuntryHtml.join(" ")
 
 }
-const htmkFuntion = (count) =>{
+const htmkFuntion = ({ name, capital, flags }) =>{
+    //!  Explore destructuring -
+    //! const { name, capital, flags } = count;
     return `
     <div>
-     <h1>${count.capital}</h1>
-     <img src="${count.flags.png}">
+     <h1>Name: ${name.common}</h1>
+     <h1>Capital:${capital}</h1>
+     <img src="${flags.png}">
     </div>
     
     `;
