@@ -2,19 +2,29 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const idd = ['No:1', 'No:2', 'No:3'];
+  // eslint-disable-next-line no-lone-blocks
+
   return (
     <div className="App">
+      {idd.map((i) => (
+        
+        <BestTopName2>{i}</BestTopName2>
+        
+      ))  
+      }
+
       <BestTopName name="redo" pp="banglladesh" top="Top1-hero"></BestTopName>
       <BestTopName name=" Hero"></BestTopName>
       <BestTopName name="dahaka"></BestTopName>
       <h1>Section2</h1>
-      <BestTopName2 idd="id:0,1,2,3,4,5,.." Companny ="bdd"></BestTopName2>
-      <BestTopName2 Companny ="b5"></BestTopName2>
-      <BestTopName2 Companny ="b58"></BestTopName2>
-      <BestTopName2 Companny ="b965"></BestTopName2>
-      <BestTopName2 Companny ="b85"></BestTopName2>
-      <BestTopName2 Companny ="b585"></BestTopName2>
-      <BestTopName2 Companny ="b55"></BestTopName2>
+      <BestTopName2 name Companny="bdd"></BestTopName2>
+      <BestTopName2 name Companny="b5"></BestTopName2>
+      <BestTopName2 name Companny="b58"></BestTopName2>
+      <BestTopName2 name Companny="b965"></BestTopName2>
+      <BestTopName2 name Companny="b85"></BestTopName2>
+      <BestTopName2 name Companny="b585"></BestTopName2>
+      <BestTopName2 name Companny="b55"></BestTopName2>
     </div>
   );
 }
