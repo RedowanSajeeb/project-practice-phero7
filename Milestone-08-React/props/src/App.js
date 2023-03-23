@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       {idd.map((i) => (
-        <BestTopName>name={i}</BestTopName>
+        <BestTopName name={i}></BestTopName>
       ))}
       {idd.map((i) => (
         <li>name={i}</li>
