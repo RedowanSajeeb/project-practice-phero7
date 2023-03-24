@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const idd = ["No:1", "No:2", "No:3", "No:4"];
+  const idd = ["No:1", "No:2", "No:3", "No:4", "No:5"];
   // eslint-disable-next-line no-lone-blocks
-
+const price = [100,5000,6015,655,555]
   return (
     <div className="App">
       {idd.map((i) => (
@@ -13,7 +13,9 @@ function App() {
       {idd.map((i) => (
         <li>name={i}</li>
       ))}
-
+      {price.map((p) => (
+        <BestTopName pp={p}></BestTopName>
+      ))}
       {/* <BestTopName name="redo" pp="banglladesh" top="Top1-hero"></BestTopName>
       <BestTopName name=" Hero"></BestTopName>
       <BestTopName name="dahaka"></BestTopName> */}
