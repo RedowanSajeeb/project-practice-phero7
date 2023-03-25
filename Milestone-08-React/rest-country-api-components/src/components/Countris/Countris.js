@@ -14,9 +14,10 @@ const Countris = () => {
         {/* <h1>coun{countris.length}</h1> */}
         {countris.map((country) => (
           <Country
-            name={country.name.common}
-            area={country.area}
-            capital={country.capital}
+          cCountry ={country}
+            // name={country.name.common}
+            // area={country.area}
+            // capital={country.capital}
             // src={country.flags.png}
           ></Country>
         ))}
