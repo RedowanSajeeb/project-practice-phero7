@@ -19,6 +19,14 @@ const Article = () => {
           many different niches and built using a range of platforms. We hope
           this inspires you to see what it’s possible to do with your own blog.
           Eat your heart out!
+          <p style={{backgroundColor:'red', padding:'20px'}}>
+            Compressing objects: 100% (8/8), done. Writing objects: 100% (9/9),
+            971 bytes | 971.00 KiB/s, done. Total 9 (delta 5), reused 0 (delta
+            0), pack-reused 0 remote: Resolving deltas: 100% (5/5), completed
+            with 5 local objects. remote: This repository moved. Please use the
+            new location: remote:
+            https://github.com/RedowanSajeeb/project-practice-phero7.git remote:{" "}
+          </p>
         </article>
       </div>
     );
