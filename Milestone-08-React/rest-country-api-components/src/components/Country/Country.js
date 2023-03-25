@@ -3,10 +3,11 @@ import './Country.css'
 
 const Country = (props) => {
     // console.log(props.country.area);
-    const { capital, area, name } = props.cCountry;
+    const { capital, area, name,flags } = props.cCountry;
     return (
       <div className="coyntry">
         <h1>Country name: {name.common}</h1>
+        <img src={flags.png} alt="" />
         <p>area{area}</p>
         <h4>
           Capital: {capital}

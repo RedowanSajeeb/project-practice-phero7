@@ -1,0 +1,9 @@
+.country-containner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    margin-top: 50px;
+}
+.country-containner :hover{
+    background-color: beige;
+}
