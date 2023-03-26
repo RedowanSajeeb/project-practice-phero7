@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Cosmatis from './compoents/cosmatics/cosmatis';
+import Shows from './compoents/shows/Shows';
 
 function App() {
   return (
     <div className="App">
-      
+    <Cosmatis></Cosmatis>
+    {/* <Shows></Shows> */}
     </div>
   );
 }
