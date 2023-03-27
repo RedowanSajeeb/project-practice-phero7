@@ -18,6 +18,19 @@ else{
 }
 localStorage.setItem('Stors-Local',JSON.stringify(stors))
 }
+// !=====================================remove
 
+const removeFun =(id) =>{
 
-export {localFunction}
+    const ckbd = localStorage.getItem("Stors-Local");
+    if(ckbd){
+        const dbparse = JSON.parse(ckbd);
+        if( id in dbparse){
+            delete dbparse[id];
+            localStorage.setItem("Stors-Local", JSON.stringify(dbparse));
+        }
+    }
+
+} 
+
+export {localFunction,removeFun}

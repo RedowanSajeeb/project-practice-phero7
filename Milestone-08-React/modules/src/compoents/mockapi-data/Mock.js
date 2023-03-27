@@ -1,5 +1,5 @@
 import React from 'react';
-import { localFunction } from '../../Utilities/fakedb';
+import { localFunction, removeFun } from '../../Utilities/fakedb';
 import { localStrogaeFunction } from '../../Utilities/Storagebd';
 import './mock.css'
 const Mock = (props) => {
@@ -17,7 +17,11 @@ const Mock = (props) => {
   const localcard = (id) =>{
     localFunction(id)
   }
+// !-------------------------remove
 
+const remove =(id) =>{
+  removeFun(id)
+}
 
 
 //    const comment = () => addTocard(id)
@@ -31,6 +35,7 @@ const Mock = (props) => {
         {/* <button onClick={comment}>Add to/ card</button> */}
         {/* <button onClick={()=>addTocard(id)}>Add to card</button> */}
         <button onClick={()=>localcard(id)}>Add To Card With Local-Storag!!</button>
+        <button onClick={()=>remove(id)}>Remove!</button>
       </div>
     );
 };
