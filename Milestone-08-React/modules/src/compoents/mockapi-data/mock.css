@@ -1,0 +1,11 @@
+.product-style{
+    border: 2px solid sandybrown;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 5px;
+}
+.product-style :hover{
+        
+  color: rgb(255, 155, 24);
+
+}
