@@ -18,7 +18,7 @@ else{
 }
 localStorage.setItem('Stors-Local',JSON.stringify(stors))
 }
-// !=====================================remove
+// !=====================================!remove
 
 const removeFun =(id) =>{
 
