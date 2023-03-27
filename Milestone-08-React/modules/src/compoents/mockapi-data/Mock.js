@@ -1,4 +1,5 @@
 import React from 'react';
+import { localFunction } from '../../Utilities/fakedb';
 import { localStrogaeFunction } from '../../Utilities/Storagebd';
 import './mock.css'
 const Mock = (props) => {
@@ -8,6 +9,17 @@ const Mock = (props) => {
     localStrogaeFunction(id)
     
    }
+
+  // ! --------------
+
+
+
+  const localcard = (id) =>{
+    localFunction(id)
+  }
+
+
+
 //    const comment = () => addTocard(id)
 
     return (
@@ -17,7 +29,8 @@ const Mock = (props) => {
         <h2>price: {price}</h2>
         <p>color-{color}</p>
         {/* <button onClick={comment}>Add to/ card</button> */}
-        <button onClick={()=>addTocard(id)}>Add to card</button>
+        {/* <button onClick={()=>addTocard(id)}>Add to card</button> */}
+        <button onClick={()=>localcard(id)}>Add To Card With Local-Storag!!</button>
       </div>
     );
 };
