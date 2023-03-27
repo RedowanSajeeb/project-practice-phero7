@@ -1,10 +1,12 @@
 import React from 'react';
+import { localStrogaeFunction } from '../../Utilities/Storagebd';
 import './mock.css'
 const Mock = (props) => {
     const { id, name, price, color } = props.cosmatick;
-   const addTocard = (id) =>{
-    console.log('button',id);
 
+   const addTocard = (id) =>{
+    localStrogaeFunction(id)
+    
    }
 //    const comment = () => addTocard(id)
 
