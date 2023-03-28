@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Ordercard from '../Order-card/Ordercard';
 import Product from '../product/Product';
 import './Shows.css'
 const Shows = () => {
@@ -34,8 +35,7 @@ const addOnclickTocard = (product) =>{
                 }
             </div>
             <div>
-                <h4>Order Summary</h4>
-                <h4>Selected Items: {cart.length}</h4>
+                <Ordercard card={cart}></Ordercard>
             </div>
             
         </div>
