@@ -1,5 +1,14 @@
 .shows-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
-    margin-left: 20px;
+    margin-left: 140px;
+    margin-right: 45px;
+}
+.container-product-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 45px;
+    margin: 54px;
+    margin-left: 140px;
+    margin-right: 220px;
 }
