@@ -14,8 +14,23 @@ console.log(cart);
     },[])
     useEffect(()=>{
     const stoardCart =  getShoppingCart();
-    console.log(stoardCart);
-    },[])
+    const savedCart = [];
+    // !step-1-getid
+    for(const id in stoardCart){
+        //!step-2 get the peoduct by using id
+      const addedProduct = products.find(product => product.id === id);
+    //   console.log(sevedProduct);
+    if(addedProduct){
+  //! step3 get quntity of product
+    const quantity = stoardCart[id];
+        addedProduct.quantity  = quantity
+        // !step4
+        savedCart.push(addedProduct)
+    }
+    }
+    //! step-5!
+    setCart(savedCart)
+    },[products])
     //! ------------------
 const addOnclickTocard = (product) =>{
     // console.log('adddpro',product.id,product)
