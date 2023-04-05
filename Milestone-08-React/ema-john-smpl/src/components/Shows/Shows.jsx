@@ -6,7 +6,7 @@ import './Shows.css'
 const Shows = () => {
     const [products,setProducts] = useState([]);
     const [cart,setCart] = useState([]);
-console.log(cart);
+// console.log(cart);
     useEffect(()=>{
         fetch('products.json')
         .then(res => res.json())
@@ -34,7 +34,20 @@ console.log(cart);
     //! ------------------
 const addOnclickTocard = (product) =>{
     // console.log('adddpro',product.id,product)
-    const newCart = [...cart,product];
+    // const newCart = [...cart,product];
+    // --------------------------
+    let newCart = [];
+    const exist = cart.find(p => p.id === product.id);
+    if(!exist){
+        product.quantity = 1
+        newCart = [...cart,product]
+    }
+    else{
+        exist.quantity = exist.quantity + 1;
+        const remanning = cart.filter(p => p.id !== product.id);
+        newCart = [...remanning,exist];
+    }
+// ---------------------------
     setCart(newCart);
     addToDb(product.id)
 
