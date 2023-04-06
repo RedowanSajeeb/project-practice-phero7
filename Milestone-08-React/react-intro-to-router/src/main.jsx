@@ -3,24 +3,27 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+import Error from './Components/Error/Error';
+import Home from './Components/Home/Home';
 
 
-const router1 = createBrowserRouter([
-  {
-    path:"/",
-    element: <h1>hye Router</h1>,
-  },
-  {
-    path:"/about",
-    element: <div>This is about page!!</div>
-  },
-  {
-    path: "/contact",
-    element: <div>This is contact page!!</div>
-
-  },
-  
-]);
+// const router1 = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <h1>hye Router</h1>,
+//     errorElement: <Error></Error>,
+//   },
+//   {
+//     path: "/about",
+//     element: <About></About>,
+//   },
+//   {
+//     path: "/contact",
+//     element: <Contact></Contact>,
+//   },
+// ]);
 
 // const router = createBrowserRouter([
 //   {
@@ -39,9 +42,36 @@ const router1 = createBrowserRouter([
 
 // ])
 
+const router = createBrowserRouter ([
+  
+{
+    path: '/',
+    element: <Home></Home>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: 'about',
+        element: <About></About>
+      },
+      {
+        path: 'contact',
+        element: <Contact></Contact>
+      }
+    ]
+},
+
+
+
+])
+
+
+
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router1}></RouterProvider>
-    {/* <RouterProvider router={router}></RouterProvider> */}
+    <RouterProvider router={router}></RouterProvider>
+    {/* <RouterProvider router={router1}></RouterProvider> */}
   </React.StrictMode>,
 )
