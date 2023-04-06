@@ -10,9 +10,9 @@ const CardPrice = ({ price }) => {
       </h1>
       <h1 className="text-2xl font-bold">{price.name}</h1>
       <p>features:</p>
-      {price.features.map((f,index)=> <Features
+      {price.features.map((f,idx)=> <Features
       // idx
-      key={index}
+      key={idx}
       f={f}></Features>)
       }
       <button className='w-full absolute bottom-0 bg-green-600 py-2 px-2 text-white  rounded-md font-bold'>Buy Now</button>
