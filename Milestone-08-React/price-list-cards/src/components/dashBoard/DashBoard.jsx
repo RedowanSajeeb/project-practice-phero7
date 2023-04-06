@@ -99,13 +99,15 @@ const DashBoard = () => {
      ];
       
     return (
-      <div className='ms-5'>
+      <div className="ms-5">
         <h1>DashBoard</h1>
 
         <LineChart width={500} height={300} data={marksArray}>
           <Line stroke="#8884d8" dataKey="physics"></Line>
-          <Line  dataKey="math"></Line>
+          <Line dataKey="math"></Line>
           <XAxis dataKey="name" />
+          <CartesianGrid strokeDasharray="3 3" />
+
           <YAxis></YAxis>
           <Tooltip />
           <Legend />

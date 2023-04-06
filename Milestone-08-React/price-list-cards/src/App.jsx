@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Nav-bar/Navbar'
 import Price from './components/price/Price'
 import DashBoard from './components/dashBoard/DashBoard'
+import PhoneBar from './components/Phonebar/PhoneBar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <h1 className='text-7xl    text-blue-700 mt-5'> Hey Hlw Frome Tailwind!!</h1>
      <Price></Price>
      <DashBoard></DashBoard>
+     <PhoneBar></PhoneBar>
     </div>
   )
 }
