@@ -2,7 +2,7 @@ import React from 'react';
 import "/src/Components/Friends/Frien.css";
 import { Link } from 'react-router-dom';
 const Friend = ({ frnd }) => {
-    console.log(frnd);
+    // console.log(frnd);
   return (
     <div className="frtiend">
       <h1>Friend Name : {frnd.name}</h1>
