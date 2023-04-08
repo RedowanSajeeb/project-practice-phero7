@@ -7,7 +7,7 @@ const Navbar = () => {
       <Nav variant="tabs" defaultActiveKey="/home">
         <Nav.Item>
           <Nav.Link>
-            <ActiveLink eventKey="link-1" to={`/home`}>
+            <ActiveLink eventKey="link-1" to={`/`}>
               
               Home
             </ActiveLink>
