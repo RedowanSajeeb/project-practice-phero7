@@ -10,6 +10,7 @@ import Mains from './components/Layout/Mains';
 import Oders from './components/Layout/Oders';
 import ManageInventory from './components/Layout/ManageInventory';
 import Login from './components/Layout/Login';
+import cartProductLoder from './Loders/CardPRoducts';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       {
         path: "OrderReview",
         element: <Oders></Oders>,
+        loader: cartProductLoder
       },
       {
         path: "ManageInventory",
