@@ -11,10 +11,10 @@ const NavHeader = () => {
               nextPage
             </span>
           </Link>
-          <div className='flex flex-row gap-6 font-semibold'>
-            <NavLink>Home</NavLink>
-            <NavLink>Books</NavLink>
-            <NavLink to={'/About'}>About us</NavLink>
+          <div className="flex flex-row gap-6 font-semibold">
+            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/books"}>Books</NavLink>
+            <NavLink to={"/About"}>About us</NavLink>
           </div>
         </div>
       </div>
