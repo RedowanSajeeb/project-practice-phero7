@@ -1,14 +1,17 @@
 import React from 'react';
 import Ordercard from '../Order-card/Ordercard';
 import { useLoaderData } from 'react-router-dom';
-
+import ReviewsItms from './ReviewsItms';
+import "../css/Rb.css"
 const Oders = () => {
     const card = useLoaderData();
     return (
-      <div className="shows-container">
-        <div className="container-product-box">
-          <div>
-            <h1>pagr{card.length}</h1>
+      <div className="d">
+        <div className="">
+          <div className="reviw">
+            {card.map((pd) => (
+              <ReviewsItms product={pd} key={pd.id}></ReviewsItms>
+            ))}
           </div>
         </div>
         <div className="">

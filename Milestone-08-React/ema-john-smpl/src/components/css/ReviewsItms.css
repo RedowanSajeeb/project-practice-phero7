@@ -1,0 +1,18 @@
+.ReviewsItms{
+    width: 571px;
+margin-right: 220px;
+margin-left: 90px;
+border: 1px solid #95A0A7;
+border-radius: 8px;
+margin-top: 25px;
+display: flex;
+
+}
+.ReviewsItms img{
+    
+border-radius: 6px;
+width: 91px;
+height: 91px; 
+margin: 5px;
+margin-top: 50px;
+}
