@@ -10,3 +10,13 @@
     position: sticky;
     top: 0;
 }
+.buttonClear-cartd{
+    background: #FF3030;
+border-radius: 4px;
+color: white;
+width: 200px;
+height: 56px;
+font-weight: 400;
+font-size: 21px;
+line-height: 25px
+}

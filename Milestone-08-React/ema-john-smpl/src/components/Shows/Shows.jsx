@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
 import Ordercard from '../Order-card/Ordercard';
 import Product from '../product/Product';
 import './Shows.css'
@@ -52,27 +52,31 @@ const addOnclickTocard = (product) =>{
     addToDb(product.id)
 
 }
+
+const handelAllremmoceCardCard=() =>{
+  setCart([])
+  deleteShoppingCart()
+}
+
+
     return (
-        <div className='shows-container'>
-            <div className='container-product-box'>
-                {
-                    products.map(product =>
-                        <Product
-                        key={product.id}
-
-                        product={product}
-                        
-                        addOnclickTocard={addOnclickTocard}
-                        ></Product>
-
-                        )
-                }
-            </div>
-            <div>
-                <Ordercard card={cart}></Ordercard>
-            </div>
-            
+      <div className="shows-container">
+        <div className="container-product-box">
+          {products.map((product) => (
+            <Product
+              key={product.id}
+              product={product}
+              addOnclickTocard={addOnclickTocard}
+            ></Product>
+          ))}
         </div>
+        <div>
+          <Ordercard
+            card={cart}
+            handelAllremmoceCardCard={handelAllremmoceCardCard}
+          ></Ordercard>
+        </div>
+      </div>
     );
 };
 

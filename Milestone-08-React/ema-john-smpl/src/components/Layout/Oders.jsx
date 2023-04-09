@@ -3,7 +3,7 @@ import Ordercard from '../Order-card/Ordercard';
 import { useLoaderData } from 'react-router-dom';
 import ReviewsItms from './ReviewsItms';
 import "../css/Rb.css"
-import { removeFromDb } from '../../utilities/fakedb';
+import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 const Oders = () => {
     const card = useLoaderData();
 
@@ -16,7 +16,16 @@ const Oders = () => {
     const remainging = mcart.filter(pid => pid.id !==id)
     setMcart(remainging)
     removeFromDb(id)
+
    }
+
+const handelAllremmoceCardCard = () =>{
+  setMcart([])
+  deleteShoppingCart();
+}
+
+
+
     return (
       <div className="d">
         <div className="">
@@ -31,7 +40,10 @@ const Oders = () => {
           </div>
         </div>
         <div className="fixd">
-          <Ordercard card={mcart}></Ordercard>
+          <Ordercard
+            card={mcart}
+            handelAllremmoceCardCard={handelAllremmoceCardCard}
+          ></Ordercard>
         </div>
       </div>
     );
