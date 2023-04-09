@@ -1,22 +1,32 @@
 import React from 'react';
 import '../css/ReviewsItms.css'
-
-const ReviewsItms = ({product}) => {
-    const { img, name, price, shipping, id, quantity } = product;
-    console.log(product);
-    return (
-      <div className="ReviewsItms">
-        <div>
-          <img src={img} alt="" />
-        </div>
-        <div className="p">
-          <h4>{name}</h4>
-          <h5>Price:${price}</h5>
-          <h6>Shipping Charge : ${shipping}</h6>
-          <p>quantity: {quantity}</p>
-        </div>
+ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+const ReviewsItms = ({ product, handelremoveFromeCard }) => {
+  const { img, name, price, shipping, id, quantity } = product;
+  console.log(product);
+  return (
+    <div className="ReviewsItms">
+      <div>
+        <img src={img} alt="" />
       </div>
-    );
+      <div className="p">
+        <h4>{name}</h4>
+        <h3>
+          Price: <span className="color">${price}</span>
+        </h3>
+        <h5>
+          Shipping Charge : <span className="color">${shipping}</span>
+        </h5>
+        <h4>
+          quantity: <span className="color">{quantity}</span>
+        </h4>
+      </div>
+      <h1 onClick={()=> handelremoveFromeCard(id)} className="dlt">
+        <FontAwesomeIcon className="button" icon={faTrashAlt} />
+      </h1>
+    </div>
+  );
 };
 
 export default ReviewsItms;

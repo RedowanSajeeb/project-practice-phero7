@@ -1,11 +1,14 @@
 .reviw{
- 
+
 }
 .d{
     display: flex;
     align-items: center;
-    margin-left: 220px;
-    margin-top: 90px;
-   
+    top: 0;
+}
+.fixd{
     
+    position: fixed;
+    top: 10px;
+    right: 0;
 }

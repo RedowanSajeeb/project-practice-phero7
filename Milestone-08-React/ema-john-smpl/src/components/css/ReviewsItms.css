@@ -1,18 +1,46 @@
 .ReviewsItms{
     width: 571px;
+    height: 207px;
 margin-right: 220px;
 margin-left: 90px;
 border: 1px solid #95A0A7;
 border-radius: 8px;
 margin-top: 25px;
 display: flex;
+margin-left: 300px;
 
 }
 .ReviewsItms img{
-    
+
 border-radius: 6px;
 width: 91px;
 height: 91px; 
-margin: 5px;
-margin-top: 50px;
+margin-top: 50%;
+
+
+margin-right: 50px;
+
+}
+.ReviewsItms  h3{
+    margin: 0;
+}
+.dlt{
+    
+    margin-top: 60px;
+    width: 20px;
+    background: rgba(235, 87, 87, 0.3);
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    
+    
+}
+.color{
+    color: #FF9900;
+}
+.button{
+    color: #EB5757;
+;
+    margin-left: 13px;
+    margin-top: 10px;
 }
