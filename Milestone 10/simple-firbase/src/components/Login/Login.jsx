@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { initializeApp } from "firebase/app";
 import app from '../../Firebase/firebase.config';
-import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, TwitterAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
 const Login = () => {
     const [user,setUser] = useState(null)
     const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
-  
-
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+   const facebookProvider = new FacebookAuthProvider();
     const googleHandelarClick = ()=>{
-      signInWithPopup(auth,provider)
+      signInWithPopup(auth,googleProvider)
       .then((result) =>{
          const signInuser = result.user;
          console.log(signInuser);
@@ -34,12 +34,42 @@ const Login = () => {
 
   
     }
+const gitHubLoginOnClick = () =>{
+    signInWithPopup(auth,githubProvider)
+    .then(result=>{
+        const userGithub = result.user;
+        console.log(userGithub);
+        setUser(userGithub);
+    })
+    .catch(error=>{
+        console.log(error);
+    })
 
+}
+const facebookLoginOnClick = () => {
+  signInWithPopup(auth, facebookProvider)
+    .then((reslt) => {
+      console.log(reslt);
+      const facebookuser = reslt.user;
+      setUser(facebookuser);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
     return (
       <div>
+        {user ? (
+          <button onClick={signOuthendler}>signOut</button>
+        ) : (
+          <>
+            <button onClick={googleHandelarClick}>Go Google</button>
 
-        { user?<button onClick={signOuthendler}>signOut</button> :
-        <button onClick={googleHandelarClick}>Go Google</button>}
+            <button onClick={gitHubLoginOnClick}>GitHub Login</button>
+            <button onClick={facebookLoginOnClick}>facebook</button>
+          </>
+        )}
+
         {user && (
           <div>
             User: {user.displayName}
