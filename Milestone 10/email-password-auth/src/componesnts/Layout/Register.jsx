@@ -37,7 +37,7 @@ const onSubmitHendel =(event)=>{
               id=""
             />
           </div>
-          <input type="submit" value="Submit" />
+          <input className='btn btn-danger' type="submit" value="Submit" />
         </form>
       </>
     );
