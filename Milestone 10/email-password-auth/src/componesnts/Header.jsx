@@ -1,10 +1,15 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import "../componesnts/Header.css";
 const Header = () => {
     return (
-        <div>
-            
-        </div>
+      <div>
+        <nav>
+          <Link to={"/"}>Home</Link>
+          <Link to={"/login"}>Login</Link>
+          <Link to={"/register"}>Register</Link>
+        </nav>
+      </div>
     );
 };
 
