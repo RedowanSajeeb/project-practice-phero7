@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
-  const { loginUser, usingGoogle } = useContext(AuthContext);
+  const { loginU1qser, usingGoogle } = useContext(AuthContext);
   const loginSubmitBTnHendel = (event) => {
     event.preventDefault();
     const from = event.target;

@@ -7,6 +7,7 @@ export const AuthContext = createContext(null);
  const googProvider = new GoogleAuthProvider() 
 const AuthProvider = ({children}) => {
   const [user,setUser] = useState(null)
+  console.log(user);
   const [loding,useLoding] = useState(true);
 
   const createUser = (email, password)=>{
@@ -24,7 +25,7 @@ const AuthProvider = ({children}) => {
 
   useEffect(()=>{
   const unsubscribe =  onAuthStateChanged(auth,currentUser =>{
-        console.log("set",currentUser);
+        // console.log("set",currentUser);
         setUser(currentUser)
         useLoding(false);
     })
