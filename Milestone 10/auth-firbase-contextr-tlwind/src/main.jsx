@@ -8,6 +8,9 @@ import Home from './Components/Home.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProvider from './Providers/AuthProvider.jsx';
+import Oder from './Components/Oder.jsx';
+import Privert_Rout from './Routes/Privert_Rout.jsx';
+import UserProfile from './Components/UserProfile.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/oder",
+        element:<Privert_Rout> <Oder></Oder></Privert_Rout>,
+      },
+      {
+        path: "/userProfile",
+        element:<Privert_Rout> <UserProfile></UserProfile></Privert_Rout>,
       },
     ],
   },

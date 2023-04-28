@@ -31,6 +31,15 @@ const Header = () => {
             >
               Register
             </Link>
+            <Link className="btn btn-ghost normal-case text-xl" to={"/oder"}>
+              Oder
+            </Link>
+           {user && <Link
+              className="btn btn-ghost normal-case text-xl"
+              to={"/userProfile"}
+            >
+              userProfile
+            </Link>}
             {user ? (
               <div>
                 <h4>{user.email}</h4>
