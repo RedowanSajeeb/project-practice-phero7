@@ -75,6 +75,7 @@ const handelAllremmoceCardCard=() =>{
             card={cart}
             handelAllremmoceCardCard={handelAllremmoceCardCard}
           ></Ordercard>
+          {/* <h1>shops</h1> */}
         </div>
       </div>
     );

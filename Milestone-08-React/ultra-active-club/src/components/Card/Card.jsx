@@ -1,9 +1,24 @@
 import React from 'react';
+import Cards from '../Cards/Cards';
 
-const Card = (props) => {
+const Card = () => {
+       const [cardss,setCards] = useState([]);
+    useEffect(()=>{
+        fetch('fekedb.json')
+	.then(response => response.json())
+	.then(data => setCards(data));
+    console.log(cardss);
+    },[])
     console.log(props.card);
+    
     return (
-        <div>
+        <div>{
+            
+            cardss.map(card => <Card
+            card ={card}
+            ></Card>)
+            
+            }
             <h5>Lorem ipsum dolor sit amet.</h5>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
   <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>

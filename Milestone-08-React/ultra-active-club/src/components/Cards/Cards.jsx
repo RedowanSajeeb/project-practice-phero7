@@ -3,17 +3,17 @@ import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 
 const Cards = () => {
-    const [cards,setCards] = useState([]);
+    const [cardss,setCards] = useState([]);
     useEffect(()=>{
         fetch('fekedb.json')
 	.then(response => response.json())
 	.then(data => setCards(data));
-    console.log(cards);
+    console.log(cardss);
     },[])
     return (
         <div>
           {
-            cards.map(card => <Card
+            cardss.map(card => <Card
             card ={card}
             ></Card>)
           }

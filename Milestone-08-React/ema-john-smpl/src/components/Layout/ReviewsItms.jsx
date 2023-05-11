@@ -24,6 +24,7 @@ const ReviewsItms = ({ product, handelremoveFromeCard }) => {
       </div>
       <h1 onClick={()=> handelremoveFromeCard(id)} className="dlt">
         <FontAwesomeIcon className="button" icon={faTrashAlt} />
+        
       </h1>
     </div>
   );

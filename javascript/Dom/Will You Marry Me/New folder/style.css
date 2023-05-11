@@ -1,0 +1,59 @@
+body {
+    background: #e6e6e6;
+    background-color: rgb(253, 212, 226);
+    /* background-image: url('https: //scontent.xx.fbcdn.net/v/t1.15752-9/336861406_768348031159363_7669705664676855435_n.jpg?stp=dst-jpg_s280x280&_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGqPsrkRDorTgPNULeOVRHfdtfMFNkR4Dt218wU2RHgO4Y7KCJCBiXwzgmWDN2LwQEfgX2bCvYH6SSGAKWBq2MH&_nc_ohc=usJj46iu1I4AX-gwVQK&_nc_oc=AQksLq20t5lIGpaXK4qeau9F5Z2lgbeBhv17izFglAEf72L5AtcPlG_n5BrFUoXH6v1OT1u-yL4nqUUdVkUFIbln&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRG5w7dp6LDCxfAIgZzPqg0HdTYvKBYafsdqwVI7AcuhQ&oe=64407F23'); */
+}
+
+.accordion .card {
+    border: none;
+    margin-bottom: 2px;
+    border-radius: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.accordion .card .card-header {
+    background: #be0032;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 0;
+}
+
+.accordion .card-header h2 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+.accordion img {
+    width: 150px;
+    float: right;
+
+}
+
+.accordion .card-header h2 span {
+    float: left;
+    margin-top: 10px;
+}
+
+.accordion .card-header .btn {
+    font-weight: 500;
+}
+
+.accordion .card-header i {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0 6px 0 -10px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+
+.accordion .card-header button:hover {
+    color: #23384e;
+}
+
+.accordion .card-body {
+    color: #666;
+
+}

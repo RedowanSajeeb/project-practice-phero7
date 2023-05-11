@@ -32,8 +32,8 @@ const router = createBrowserRouter([
       {
         path: "id/:postid",
         element: <Dtlsid></Dtlsid>,
-        loader: ({ params }) =>
-          fetch(`https://dummyjson.com/products/${params.postid}`),
+        loader: 
+        ({ params }) => fetch(`https://dummyjson.com/products/${params.postid}`),
       },
     ],
   },
@@ -43,3 +43,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
  <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>,
 )
+

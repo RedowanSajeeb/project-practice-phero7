@@ -44,6 +44,7 @@ const handelAllremmoceCardCard = () =>{
             card={mcart}
             handelAllremmoceCardCard={handelAllremmoceCardCard}
           ></Ordercard>
+          {/* <h1>oders</h1> */}
         </div>
       </div>
     );
