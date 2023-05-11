@@ -1,15 +1,12 @@
-const express = require('express');
-const cors = require('cors')
+const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 4000;
-const { MongoClient, ServerApiVersion ,ObjectId } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 // middleware
 // redowansb72;
 // Glnn6vzuXEqt0NEN;
 // ----------------------
-
-
-
 
 const uri =
   "mongodb+srv://redowansb72:Glnn6vzuXEqt0NEN@cluster0.r6nsysj.mongodb.net/?retryWrites=true&w=majority";
@@ -27,41 +24,58 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-   const database = client.db("insertDB");
-   const haiku = database.collection("haiku");
+    const database = client.db("insertDB");
+    const haiku = database.collection("haiku");
 
+    app.get("/users", async (req, res) => {
+      const cursor = haiku.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
 
-   app.get('/users', async (req, res) => {
-        const cursor = haiku.find()
-        const result = await cursor.toArray();
-        res.send(result);
-   })
+    app.get("/users/:id", async (req, res) => {
+      const idd = req.params.id;
+      const query = { _id: new ObjectId(idd) };
+      const user = await haiku.findOne(query);
+      res.send(user);
+    });
 
+    app.post("/users", async (req, res) => {
+      const user = req.body;
+      console.log("User", user);
+      const result = await haiku.insertOne(user);
+      res.send(result);
+    });
 
+    app.put("/users/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatingUser = req.body;
+      console.log(updatingUser);
 
+      const filter = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const upUsers = {
+        $set: {
+          name: updatingUser.name,
+          email: updatingUser.email,
+        },
+      }
 
-    app.post('/users', async (req, res) => {
-       const user = req.body;
-       console.log('User',user);
-         const result = await haiku.insertOne(user);
-         res.send(result);
-    })
-
+      const result = await haiku.updateOne(filter,upUsers,options);
+      res.send(result);
+        
+    });
 
     app.delete("/users/:id", async (req, res) => {
       const id = req.params.id;
       console.log(id);
 
-      const query =  { _id: new ObjectId(id)};
+      const query = { _id: new ObjectId(id) };
 
       const result = await haiku.deleteOne(query);
 
       res.send(result);
-
-    })
-
-
-
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
@@ -75,17 +89,13 @@ async function run() {
 }
 run().catch(console.dir);
 
-
-
-app.use(cors())
+app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
 
-app.get('/',(req, res) => {
-    res.send('Welcome')
-})
-
-
-app.listen(port,()=>{
-    console.log(`server listening on port ${port}`);
-})
+app.listen(port, () => {
+  console.log(`server listening on port ${port}`);
+});

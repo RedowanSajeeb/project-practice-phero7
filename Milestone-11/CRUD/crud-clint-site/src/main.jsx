@@ -1,10 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
+import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
-import Users from "./components/Users";
-import Update from "./components/Update";
+import App from './App.jsx';
+import Users from './components/Users';
+import Update from './components/Update';
 
 const router = createBrowserRouter([
   {
@@ -14,13 +15,12 @@ const router = createBrowserRouter([
   {
     path: "/users",
     element: <Users></Users>,
-    loader: () => fetch("http://localhost:4000/users"),
+    loader: () => fetch("http://localhost:300/users"),
   },
   {
-    path: "/users/:id",
+    path: "/user/update/:id",
     element: <Update></Update>,
-    loader: ({ params }) =>
-      fetch(`http://localhost:4000/users/${params.id}`),
+    loader: ({params}) => fetch(`http://localhost:300/users/${params.id}`),
   },
 ]);
 
