@@ -33,6 +33,7 @@ const Update = () => {
             confirmButtonText: "Okay",
           });
         }
+        formValue.reset();
       })
 
 

@@ -55,12 +55,12 @@ const HomeChocolate = ({ chocolate }) => {
             {updatechocolate.map((ck) => (
               <tr key={ck._id}>
                 <td>
-                  <img className="h-14" src={ck?.img} alt="" />
+                  <img className="h-24" src={ck?.img} alt="" />
                 </td>
                 <td>{ck?.name}</td>
                 <td>{ck?.country}</td>
                 <td>{ck?.category}</td>
-                <td className="flex gap-5">
+                <td className="flex gap-5 mt-10">
                   <Link to={`/chocolates/${ck._id}`}>
                     <AiOutlineEdit className="text-3xl radial2  rounded  text-orange-900"></AiOutlineEdit>
                   </Link>
@@ -75,6 +75,6 @@ const HomeChocolate = ({ chocolate }) => {
       </div>
     </div>
   );
-};
+}
 
 export default HomeChocolate;

@@ -37,6 +37,7 @@ const NewChockletAdd = () => {
           });
         }
          
+         formValue.reset();
     })
   };
 
