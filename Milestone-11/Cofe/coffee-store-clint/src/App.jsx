@@ -14,7 +14,7 @@ const [coffees, setCoffees] = useState(coffeesLodaded);
       <div className="flex flex-col items-center mt-5 mb-10">
         <p>--- Sip & Savor ---</p>
         <h2>Our Popular Products</h2>
-        <Link>Add Coffee</Link>
+        <Link to={"/addCoffeeShop"}>Add Coffee</Link>
       </div>
       <div className="grid md:grid-cols-2 md:gap-7">
         {coffees.map((cofe) => (
