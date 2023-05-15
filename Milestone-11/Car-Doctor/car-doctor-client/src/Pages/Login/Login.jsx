@@ -32,7 +32,7 @@ const Login = () => {
             theme: "light",
           });
         }
-        // ...
+        
       })
       .catch((error) => {
         const errorCode = error.code;
