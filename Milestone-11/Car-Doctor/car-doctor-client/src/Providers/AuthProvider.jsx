@@ -1,5 +1,5 @@
 // import React from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.conf";
 
@@ -22,6 +22,10 @@ const signinUserPassword = (email, password) =>{
     setLoding(true)
     return signInWithEmailAndPassword(auth,email,password)
 }
+const logOut = () =>{
+    setLoding(true)
+    return signOut(auth)
+}
 
 useEffect(() =>{
  const unSub =  onAuthStateChanged(auth,currentUser =>{
@@ -38,6 +42,7 @@ const authInf = {
   loding,
   createUser,
   signinUserPassword,
+  logOut,
 };
 
 

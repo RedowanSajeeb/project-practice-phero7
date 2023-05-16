@@ -1,7 +1,9 @@
 // import React from 'react';
 
+import { Link } from "react-router-dom";
+
 const Card = ({ service }) => {
-    const  { title, img, price } = service
+    const  { _id, title, img, price } = service
   return (
     <div className="card h-96 w-96 bg-base-100 shadow-xl">
       <figure>
@@ -14,13 +16,13 @@ const Card = ({ service }) => {
             {" "}
             price : {price}
           </div>
-          <div className=" badge-outline">
+          <Link to={`/checkout/${_id}`}>
             <img
               className="h-10"
               src="https://www.freeiconspng.com/thumbs/red-arrow-png/red-arrow-png-23.png"
               alt=""
             />
-          </div>
+          </Link>
         </div>
       </div>
     </div>
