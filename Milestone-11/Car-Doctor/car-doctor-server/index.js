@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const jwt = require("jsonwebtoken")
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
@@ -20,6 +21,30 @@ const client = new MongoClient(uri, {
   },
 });
 
+const verifyJWT = (req,res,next) =>{
+  // console.log("hetinggggggggggg");
+  console.log(req.headers.authorization);
+
+  const authorization = req.headers.authorization;
+  if (!authorization) {
+    return res
+      .status(401)
+      .send({ error: true, message: "unauthorized access" });
+  }
+  const token = authorization.split(" ")[1];
+  console.log("token", token);
+
+  // verify a token symmetric
+  jwt.verify(token, process.env.Access_tokenJwtToken, function (error, decoded) {
+    if(error) {
+      return res.status(403).send({error: true, message: 'unexpected error authenticating'})
+    }
+    req.decoded = decoded;
+    next();
+   
+  });
+}
+
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -28,6 +53,22 @@ async function run() {
     const serviceCallations = client.db("CardDoctors").collection("Service");
     const bookService = client.db("CardDoctors").collection("BookService");
 
+
+    // jwt
+    app.post("/jwt", (req, res) => {
+      const user = req.body
+      console.log(user);
+
+    const token = jwt.sign(user, process.env.Access_tokenJwtToken, {
+      expiresIn: "1h",
+    });
+    res.send({token});
+    console.log({token});
+    })
+
+
+
+    // service
     app.get("/service", async (req, res) => {
       const cursor = serviceCallations.find();
       const result = await cursor.limit(6).toArray();
@@ -55,8 +96,13 @@ async function run() {
 
     //  ooder_BookService
 
-    app.get("/seervice-booking", async (req, res) => {
-      // console.log(req.query);
+    app.get("/seervice-booking", verifyJWT , async (req, res) => {
+      // console.log(req.headers.authorization);
+      const decoded = req.decoded;
+      if(decoded.email !== req.query.email){
+         return res.status(403).send({error: 1, message: "Invalid email"});
+
+      }
       let query = {};
       if (req.query?.email) {
         query = { email: req.query.email };

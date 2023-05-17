@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
   import "react-toastify/dist/ReactToastify.css";
+import SholLogin from "../Home/Home/Sheard/SholLogin";
 
 const SignUp = () => {
 const {createUser} = useContext(AuthContext)
@@ -89,7 +90,7 @@ const {createUser} = useContext(AuthContext)
                     <span className="label-text">Confirm Password</span>
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="Confirm Password"
                     className="input input-bordered"
@@ -110,23 +111,7 @@ const {createUser} = useContext(AuthContext)
               <div className="text-center font-bold mt-5">
                 <h6>Or Sign In with</h6>
               </div>
-              <div className="flex w-full">
-                <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
-                  <img
-                    className="h-10"
-                    src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png"
-                    alt=""
-                  />
-                </div>
-                <div className="divider divider-horizontal">OR</div>
-                <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
-                  <img
-                    className="h-10"
-                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                    alt=""
-                  />
-                </div>
-              </div>
+              <SholLogin></SholLogin>
               <div className="text-center mt-5">
                 <h4>
                   Already have an account?{" "}

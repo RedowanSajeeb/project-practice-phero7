@@ -8,6 +8,7 @@ const Navbar = () => {
 const { logOut, user } = useContext(AuthContext);
   const handelLogOut = () =>{
     logOut();
+  
 
   }
 

@@ -1,13 +1,21 @@
 // import React from 'react';
-import { Link } from "react-router-dom";
+import { Link,  useLocation, useNavigate } from "react-router-dom";
 import img from "./../../../assets/images/login/login.svg";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import SholLogin from "../Home/Home/Sheard/SholLogin";
 
 const Login = () => {
   const { signinUserPassword } = useContext(AuthContext);
+
+ const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate()
   const handelOnSubmitFrom = (event) => {
+     
+
+
     event.preventDefault();
     const fromSub = event.target;
     const email = fromSub.email.value;
@@ -31,6 +39,11 @@ const Login = () => {
             progress: undefined,
             theme: "light",
           });
+             
+           
+            console.log(user);
+            
+             navigate(from, { replace: true });
         }
         
       })
@@ -79,7 +92,7 @@ const Login = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
@@ -91,34 +104,19 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn w-full btn-outline bg-red-600  mr-6 text-white ">
-                  Login
-                  {
-                    <ToastContainer></ToastContainer>
-                  }
-                </button>
+                <div>
+                  <button className="btn w-full btn-outline bg-red-600  mr-6 text-white ">
+                    Login
+                    {<ToastContainer></ToastContainer>}
+                  </button>
+                </div>
               </div>
             </form>
             <div className="text-center font-bold mt-5">
               <h6>Or Sign In with</h6>
             </div>
-            <div className="flex w-full">
-              <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
-                <img
-                  className="h-10"
-                  src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png"
-                  alt=""
-                />
-              </div>
-              <div className="divider divider-horizontal">OR</div>
-              <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
-                <img
-                  className="h-10"
-                  src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                  alt=""
-                />
-              </div>
-            </div>
+          {/* ------- */}
+          <SholLogin></SholLogin>
             <div className="text-center mt-5">
               <h4>
                 New to Car Doctors?{" "}

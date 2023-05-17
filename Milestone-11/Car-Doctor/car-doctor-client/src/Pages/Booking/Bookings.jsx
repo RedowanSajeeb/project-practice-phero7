@@ -4,17 +4,33 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import BookingRow from "./BookingRow";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
 
 const Bookings = () => {
+  const navigation = useNavigate();
     const {user} = useContext(AuthContext)
     const [booking,setBooking] = useState([])
-    const url = `http://localhost:5000/seervice-booking?email=${user?.email}`;
+    const url = `https://car-doctor-server-nine-alpha.vercel.app/seervice-booking?email=${user?.email}`;
     useEffect(()=>{
-        fetch(url)
-        .then(res => res.json())
-        .then(data => setBooking(data) )
+        fetch(url, {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("jwt-response")}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if(!data.error){
+             setBooking(data);
+            }
+        else{
+            navigation('/')
+        }
 
-    }, [url])
+            });
+
+    }, [url,navigation])
     console.log(booking);
      const deleteBookingHandel = (id) => {
        const swalWithBootstrapButtons = Swal.mixin({
@@ -37,7 +53,7 @@ const Bookings = () => {
          })
          .then((result) => {
            if (result.isConfirmed) {
-             fetch(`http://localhost:5000/seervice-booking/${id}`, {
+             fetch(`https://car-doctor-server-nine-alpha.vercel.app/seervice-booking/${id}`, {
                method: "Delete",
              })
                .then((res) => res.json())
@@ -67,7 +83,7 @@ const Bookings = () => {
          });
      };
 const bookined = (id) => {
-  fetch(`http://localhost:5000/seervice-booking/${id}`, {
+  fetch(`https://car-doctor-server-nine-alpha.vercel.app/seervice-booking/${id}`, {
     method: "PATCH",
     headers :{
       'content-type': 'application/json'
