@@ -19,11 +19,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Shows></Shows>,
+        loader: () => fetch("http://localhost:3000/productsCount"),
       },
       {
         path: "OrderReview",
         element: <Oders></Oders>,
-        loader: cartProductLoder
+        loader: cartProductLoder,
       },
       {
         path: "ManageInventory",
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "Login",
-        element:<Login></Login>
+        element: <Login></Login>,
       },
     ],
   },

@@ -41,7 +41,7 @@ useEffect(() =>{
              const loggedUser = {
                email: currentUser.email,
              };
-            fetch("https://car-doctor-server-nine-alpha.vercel.app/jwt", {
+            fetch("https://car-doctor-server-redowansajeeb.vercel.app/jwt", {
               method: "POST",
               headers: { "content-type": "application/json" },
               body: JSON.stringify(loggedUser),

@@ -13,7 +13,7 @@ const Oders = () => {
 
    const handelremoveFromeCard = (id) =>{
 
-    const remainging = mcart.filter(pid => pid.id !==id)
+    const remainging = mcart.filter(pid => pid._id !==id)
     setMcart(remainging)
     removeFromDb(id)
 
@@ -33,7 +33,7 @@ const handelAllremmoceCardCard = () =>{
             {mcart.map((pd) => (
               <ReviewsItms
                 product={pd}
-                key={pd.id}
+                key={pd._id}
                 handelremoveFromeCard={handelremoveFromeCard}
               ></ReviewsItms>
             ))}
