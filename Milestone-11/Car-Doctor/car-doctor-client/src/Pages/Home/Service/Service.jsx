@@ -1,18 +1,26 @@
 // import React from 'react';
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Card from "./Card";
 
 const Service = () => {
   const [service, setService] = useState([]);
   const [ass,setAss] = useState(true);
+  const sercRef = useRef(null);
+  const [searcev,setSearcev] = useState('')
   // console.log(service);
   useEffect(() => {
-    fetch(`https://car-doctor-server-redowansajeeb.vercel.app/service?sort=${ass ? "ass" : "dss"}`)
+    fetch(`https://car-doctor-server-redowansajeeb.vercel.app/service?search=${searcev}&sort=${ass ? "ass" : "dss"}`)
       .then((res) => res.json())
       .then((data) => setService(data));
-  }, [ass]);
-
+  }, [ass,searcev]);
+const handleClick = (event) =>{
+  event.preventDefault();
+  
+ // console.log(sercRef.current.value);
+  setSearcev(sercRef.current.value);
+}
+console.log(searcev);
   return (
     <div>
       <div className="text-center mt-10">
@@ -34,11 +42,13 @@ const Service = () => {
         <div className="form-control">
           <div className="input-group">
             <input
+              onChange={handleClick}
+              ref={sercRef}
               type="text"
               placeholder="Search…"
               className="input input-bordered"
             />
-            <button className="btn btn-square">
+            <button className="btn btn-square" onClick={handleClick}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
