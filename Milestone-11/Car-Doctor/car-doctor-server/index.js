@@ -70,10 +70,10 @@ async function run() {
 
     // service
     app.get("/service", async (req, res) => {
-
+// db.InspirationalWomen.find({ first_name: { $regex: /Harriet/i } });
       const sort = req.query.sort
-
-       const query = {  };
+      const search = req.query.search
+       const query = { title: {$regex: search , $options: 'i'} };
        const options = {
          // sort matched documents in descending order by rating
          sort: { price: sort === "ass" ? 1 : -1},
